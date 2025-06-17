@@ -6,27 +6,52 @@ export const siteConfig = {
         "Make beautiful websites regardless of your design experience.",
     navItems: [
         {
-            label: "Home",
+            label: "About Me",
             href: "/",
         },
         {
-            label: "About",
-            href: "/about",
+            label: "Skills",
+            href: "",
+        },
+        {
+            label: "Projects",
+            href: "",
+        },
+        {
+            label: "Tools",
+            href: "",
+        },
+        {
+            label: "Contacts",
+            href: "",
         },
     ],
     navMenuItems: [
         {
-            label: "Home",
+            label: "About Me",
             href: "/",
         },
         {
-            label: "About",
-            href: "/about",
+            label: "Skills",
+            href: "",
+        },
+        {
+            label: "Projects",
+            href: "",
+        },
+        {
+            label: "Tools",
+            href: "",
+        },
+        {
+            label: "Contacts",
+            href: "",
         },
     ],
     links: {
         github: "https://github.com/HariesJS",
-        docs: "https://heroui.com",
-        discord: "https://discord.gg/9b6yyZKmH4",
+        linkedIn: "",
+        telegram: "",
+        mail: "",
     },
 }

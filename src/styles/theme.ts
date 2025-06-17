@@ -1,3 +1,6 @@
 export const Theme = {
-    primary: "#1890FF",
+    mainColors: {
+        yellow: "#e8db08",
+        black: "#000",
+    },
 }
