@@ -3,12 +3,15 @@
 import React, {useLayoutEffect} from "react"
 import gsap from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
+import {ScrollToPlugin} from "gsap/ScrollToPlugin"
 import {BottomIcon} from "@/components/Header/icons"
 import {Image} from "@heroui/image"
 import {motion} from "framer-motion"
 
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+
 export default function Home() {
-    gsap.registerPlugin(ScrollTrigger)
+    // gsap.registerPlugin(ScrollTrigger)
 
     useLayoutEffect(() => {
         const tl = gsap.timeline({
@@ -44,9 +47,67 @@ export default function Home() {
                 {opacity: 1, y: 0, rotation: 20}
             )
     }, [])
+
+    const contentRef = React.useRef(null)
+    const divRef = React.useRef(null)
+    const projectRef = React.useRef(null)
+    const footerRef = React.useRef(null)
+
+    const scrollToTop = () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: 0,
+                offsetY: 0,
+            },
+            ease: "power2.inOut",
+            autoKill: false,
+        })
+    }
+
+    const scrollToContent = () => {
+        const rect = projectRef.current.getBoundingClientRect()
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: contentRef.current?.offsetTop - rect.height,
+                offsetY: 0,
+            },
+            ease: "power2.inOut",
+            autoKill: false,
+        })
+    }
+
+    const scrollToProjects = () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: projectRef?.current,
+                offsetY: 0,
+            },
+            ease: "power2.inOut",
+            autoKill: false,
+        })
+    }
+
     return (
-        <>
-            <div className="dog-0 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div>
+            <div
+                style={{
+                    position: "fixed",
+                    gap: 20,
+                    display: "flex",
+                    zIndex: 9999,
+                }}
+            >
+                <button onClick={scrollToTop}>About Me</button>
+                <button onClick={scrollToContent}>Skills</button>
+                <button onClick={scrollToProjects}>Projects</button>
+            </div>
+            <div
+                className="dog-0 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                ref={divRef}
+            >
                 <div
                     style={{
                         display: "flex",
@@ -126,7 +187,10 @@ export default function Home() {
                     />
                 </div>
             </section>
+            <div ref={contentRef} />
             <section
+                ref={projectRef}
+                id="test"
                 className="section"
                 style={{
                     background: "#3959ab",
@@ -146,7 +210,7 @@ export default function Home() {
                 }
 
                 .content {
-                    background-color: gray;
+                    background-color: rgba(0, 0, 0, 0.5);
                     visibility: hidden;
                 }
 
@@ -171,6 +235,6 @@ export default function Home() {
                     left: calc(50% - 200px);
                 }
             `}</style>
-        </>
+        </div>
     )
 }
