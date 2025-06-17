@@ -13,7 +13,13 @@ import NextLink from "next/link"
 import clsx from "clsx"
 
 import {siteConfig} from "@/config/site"
-import {CodeIcon, GithubIcon} from "@/components/Header/icons"
+import {
+    CodeIcon,
+    GithubIcon,
+    LinkedInIcon,
+    MailIcon,
+    TelegramIcon,
+} from "@/components/Header/icons"
 
 export const Header = () => {
     return (
@@ -30,7 +36,10 @@ export const Header = () => {
                         </p>
                     </NextLink>
                 </NavbarBrand>
-                <ul className="hidden lg:flex gap-4 justify-start ml-2">
+                <ul
+                    // className="hidden lg:flex gap-4 justify-start ml-2"
+                    className="hidden md:flex gap-4 justify-start ml-2"
+                >
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarItem key={`${item.label}-${index}`}>
                             <NextLink
@@ -52,7 +61,10 @@ export const Header = () => {
                 className="hidden sm:flex basis-1/5 sm:basis-full"
                 justify="end"
             >
-                <NavbarItem className="hidden sm:flex gap-2">
+                <NavbarItem
+                    // className="hidden sm:flex gap-2"
+                    className="hidden md:flex gap-2"
+                >
                     <Link
                         isExternal
                         aria-label="Github"
@@ -60,17 +72,31 @@ export const Header = () => {
                     >
                         <GithubIcon className="text-default-500" />
                     </Link>
+                    <Link
+                        isExternal
+                        aria-label="LinkedIn"
+                        href={siteConfig.links.linkedIn}
+                    >
+                        <LinkedInIcon />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="Telegram"
+                        href={siteConfig.links.telegram}
+                    >
+                        <TelegramIcon />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="Mail"
+                        href={siteConfig.links.mail}
+                    >
+                        <MailIcon />
+                    </Link>
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-                <Link
-                    isExternal
-                    aria-label="Github"
-                    href={siteConfig.links.github}
-                >
-                    <GithubIcon className="text-default-500" />
-                </Link>
+            <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <NavbarMenuToggle />
             </NavbarContent>
 

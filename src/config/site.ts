@@ -50,8 +50,8 @@ export const siteConfig = {
     ],
     links: {
         github: "https://github.com/HariesJS",
-        linkedIn: "",
-        telegram: "",
-        mail: "",
+        linkedIn: "https://www.linkedin.com/in/evgeniy-chepurnoy/",
+        telegram: "https://t.me/evg_9",
+        mail: "mailto:lofmty@gmail.com",
     },
 }
