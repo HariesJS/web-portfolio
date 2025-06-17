@@ -23,7 +23,11 @@ import {
 
 export const Header = () => {
     return (
-        <HeroUINavbar maxWidth="xl" position="sticky">
+        <HeroUINavbar
+            maxWidth="xl"
+            position="sticky"
+            className="backdrop-blur-sm bg-black/50"
+        >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand as="li" className="gap-3 max-w-fit">
                     <NextLink
@@ -36,10 +40,7 @@ export const Header = () => {
                         </p>
                     </NextLink>
                 </NavbarBrand>
-                <ul
-                    // className="hidden lg:flex gap-4 justify-start ml-2"
-                    className="hidden md:flex gap-4 justify-start ml-2"
-                >
+                <ul className="hidden md:flex gap-4 justify-start ml-2">
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarItem key={`${item.label}-${index}`}>
                             <NextLink
@@ -61,10 +62,7 @@ export const Header = () => {
                 className="hidden sm:flex basis-1/5 sm:basis-full"
                 justify="end"
             >
-                <NavbarItem
-                    // className="hidden sm:flex gap-2"
-                    className="hidden md:flex gap-2"
-                >
+                <NavbarItem className="hidden md:flex gap-2">
                     <Link
                         isExternal
                         aria-label="Github"
