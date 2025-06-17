@@ -4896,6 +4896,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.13.0":
+  version: 3.13.0
+  resolution: "gsap@npm:3.13.0"
+  checksum: 40884726718b5bed8cdd6faa621b3eaec64541b6fc163a0af810d3626d750e5d010f7300f4b106327d4474623a9fd5f915a48081d7744eec38c57a1fce20fb62
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.2":
   version: 1.1.0
   resolution: "has-bigints@npm:1.1.0"
@@ -5799,6 +5806,7 @@ __metadata:
     eslint-plugin-unused-imports: 4.1.4
     framer-motion: 11.13.1
     globals: 16.0.0
+    gsap: ^3.13.0
     intl-messageformat: 10.7.16
     next: 15.3.1
     next-themes: 0.4.6
