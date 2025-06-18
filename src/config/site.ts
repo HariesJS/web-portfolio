@@ -7,7 +7,7 @@ export const siteConfig = {
     navItems: [
         {
             label: "About Me",
-            href: "/",
+            href: "",
         },
         {
             label: "Skills",
@@ -29,7 +29,7 @@ export const siteConfig = {
     navMenuItems: [
         {
             label: "About Me",
-            href: "/",
+            href: "",
         },
         {
             label: "Skills",

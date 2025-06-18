@@ -21,7 +21,7 @@ import {
     TelegramIcon,
 } from "@/components/Header/icons"
 
-export const Header = () => {
+export const Header = ({buttonsData}: {buttonsData: any[]}) => {
     return (
         <HeroUINavbar
             maxWidth="xl"
@@ -47,16 +47,19 @@ export const Header = () => {
                 <ul className="hidden md:flex gap-4 justify-start ml-2">
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarItem key={`${item.label}-${index}`}>
-                            <NextLink
+                            <Link
                                 className={clsx(
                                     linkStyles({color: "foreground"}),
-                                    "data-[active=true]:text-primary data-[active=true]:font-medium"
+                                    "data-[active=true]:text-primary data-[active=true]:font-medium hover:text-[#e8db08] transition-colors duration-300"
                                 )}
                                 color="foreground"
-                                href={item.href}
+                                onClick={buttonsData[index]}
+                                style={{
+                                    cursor: "pointer",
+                                }}
                             >
                                 {item.label}
-                            </NextLink>
+                            </Link>
                         </NavbarItem>
                     ))}
                 </ul>

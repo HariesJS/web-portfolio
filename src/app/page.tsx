@@ -7,12 +7,11 @@ import {ScrollToPlugin} from "gsap/ScrollToPlugin"
 import {BottomIcon} from "@/components/Header/icons"
 import {Image} from "@heroui/image"
 import {motion} from "framer-motion"
+import {Header} from "@/components/Header"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 export default function Home() {
-    // gsap.registerPlugin(ScrollTrigger)
-
     useLayoutEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -48,10 +47,10 @@ export default function Home() {
             )
     }, [])
 
-    const contentRef = React.useRef(null)
-    const divRef = React.useRef(null)
-    const projectRef = React.useRef(null)
-    const footerRef = React.useRef(null)
+    const contentRef = React.useRef<any>(null)
+    const projectRef = React.useRef<any>(null)
+    const toolsRef = React.useRef<any>(null)
+    const contactsRef = React.useRef<any>(null)
 
     const scrollToTop = () => {
         gsap.to(window, {
@@ -90,23 +89,44 @@ export default function Home() {
         })
     }
 
+    const scrollToTools = () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: toolsRef?.current,
+                offsetY: 0,
+            },
+            ease: "power2.inOut",
+            autoKill: false,
+        })
+    }
+
+    const scrollToContacts = () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: contactsRef?.current,
+                offsetY: 0,
+            },
+            ease: "power2.inOut",
+            autoKill: false,
+        })
+    }
+
+    const buttonsData = [
+        scrollToTop,
+        scrollToContent,
+        scrollToProjects,
+        scrollToTools,
+        scrollToContacts,
+    ]
+
     return (
         <div>
-            <div
-                style={{
-                    position: "fixed",
-                    gap: 20,
-                    display: "flex",
-                    zIndex: 9999,
-                }}
-            >
-                <button onClick={scrollToTop}>About Me</button>
-                <button onClick={scrollToContent}>Skills</button>
-                <button onClick={scrollToProjects}>Projects</button>
-            </div>
+            <Header buttonsData={buttonsData} />
             <div
                 className="dog-0 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                ref={divRef}
+                id="about"
             >
                 <div
                     style={{
@@ -136,22 +156,24 @@ export default function Home() {
                             marginRight: "20%",
                         }}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Laudantium porro, assumenda sunt voluptates non
+                        {`Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Laudantium porro, assumenda\nsunt voluptates non
                         eaque! Accusamus id quod nostrum dolore consequuntur
                         odio quae totam alias, nulla, quos, quaerat corporis
-                        voluptas?
+                        voluptas?`}
                     </p>
                     <motion.div
                         initial={{y: 0}}
-                        animate={{y: [0, 20, 0]}} // вниз, затем обратно
+                        animate={{y: [0, 20, 0]}}
                         transition={{
                             duration: 2,
                             ease: "easeInOut",
                             repeat: Infinity,
-                            repeatType: "loop", // back-and-forth
+                            repeatType: "loop",
                         }}
-                        style={{display: "inline-block"}}
+                        style={{
+                            display: "inline-block",
+                        }}
                     >
                         <BottomIcon size={50} />
                     </motion.div>
@@ -190,10 +212,23 @@ export default function Home() {
             <div ref={contentRef} />
             <section
                 ref={projectRef}
-                id="test"
                 className="section"
                 style={{
                     background: "#3959ab",
+                }}
+            ></section>
+            <section
+                ref={toolsRef}
+                className="section"
+                style={{
+                    background: "orange",
+                }}
+            ></section>
+            <section
+                ref={contactsRef}
+                className="section"
+                style={{
+                    background: "green",
                 }}
             ></section>
             <style jsx global>{`
@@ -210,7 +245,6 @@ export default function Home() {
                 }
 
                 .content {
-                    background-color: rgba(0, 0, 0, 0.5);
                     visibility: hidden;
                 }
 
