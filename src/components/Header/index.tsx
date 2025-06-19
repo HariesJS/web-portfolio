@@ -111,8 +111,8 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color={"foreground"}
-                                href={item.href}
                                 size="lg"
+                                onClick={buttonsData[index]}
                             >
                                 {item.label}
                             </Link>

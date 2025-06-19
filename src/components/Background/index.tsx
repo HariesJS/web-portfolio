@@ -27,7 +27,7 @@ export const Background = () => {
                         width: "100vw",
                         height: "100vh",
                         background:
-                            "linear-gradient(-45deg,rgb(0, 0, 0),rgba(234, 255, 0, 0.35),rgb(0, 0, 0),rgb(0, 0, 0))",
+                            "linear-gradient(-45deg,rgb(0, 0, 0),rgba(97, 218, 251, 0.35),rgb(0, 0, 0),rgb(0, 0, 0))",
                         backgroundSize: "200% 400%",
                         animation: "gradientMove 50s ease infinite",
                     }}
@@ -37,13 +37,13 @@ export const Background = () => {
                 <style jsx global>{`
                     @keyframes gradientMove {
                         0% {
-                            background-position: 10% 10%;
-                        }
-                        50% {
                             background-position: 40% 50%;
                         }
-                        100% {
+                        50% {
                             background-position: 10% 10%;
+                        }
+                        100% {
+                            background-position: 40% 50%;
                         }
                     }
                 `}</style>
