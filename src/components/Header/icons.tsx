@@ -95,6 +95,32 @@ export const TelegramIcon: React.FC<IconSvgProps> = ({
     )
 }
 
+export const TopIcon: React.FC<IconSvgProps> = ({
+    size = 24,
+    width,
+    height,
+    ...props
+}) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={Theme.mainColors.white}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            {...props}
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 13l3 -3l3 3" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+        </svg>
+    )
+}
+
 export const MailIcon: React.FC<IconSvgProps> = ({
     size = 24,
     width,

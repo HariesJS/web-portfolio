@@ -10,6 +10,7 @@ import {
     LinkedInIcon,
     MailIcon,
     TelegramIcon,
+    TopIcon,
 } from "@/components/Header/icons"
 import {Image} from "@heroui/image"
 import {Accordion, AccordionItem} from "@heroui/accordion"
@@ -26,6 +27,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false)
+    const [isShowTopButton, setIsShowTopButton] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -79,9 +81,28 @@ export default function Home() {
     const projectRef = React.useRef<any>(null)
     const toolsRef = React.useRef<any>(null)
     const contactsRef = React.useRef<any>(null)
+    const mainRef = React.useRef<any>(null)
 
     const skillsRefs = useRef<(HTMLDivElement | null)[]>([])
     const skillsContainerRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const update = () => {
+            if (mainRef.current) {
+                const rect = mainRef.current.getBoundingClientRect()
+                if (rect.top < -200) {
+                    setIsShowTopButton(true)
+                } else {
+                    setIsShowTopButton(false)
+                }
+            }
+        }
+
+        window.addEventListener("scroll", update)
+        update()
+
+        return () => window.removeEventListener("scroll", update)
+    }, [])
 
     const scrollToTop = () => {
         gsap.to(window, {
@@ -174,8 +195,29 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div ref={mainRef}>
             <Header buttonsData={buttonsData} />
+            {isShowTopButton ? (
+                <div
+                    onClick={scrollToTop}
+                    style={{
+                        cursor: "pointer",
+                        position: "fixed",
+                        bottom: "5%",
+                        zIndex: 999,
+                    }}
+                >
+                    <div
+                        style={{
+                            backdropFilter: "blur(10px)",
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            borderRadius: "100px",
+                        }}
+                    >
+                        <TopIcon size={50} />
+                    </div>
+                </div>
+            ) : null}
             <div
                 className="dog-0 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 id="about"
@@ -296,7 +338,13 @@ export default function Home() {
                     opacity: 0.5,
                 }}
             ></section>
-            <section ref={toolsRef} className="tools">
+            <section
+                ref={toolsRef}
+                className="tools"
+                style={{
+                    opacity: isLoaded ? 1 : 0,
+                }}
+            >
                 <p
                     style={{
                         textAlign: "center",
@@ -566,7 +614,13 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
             </section>
-            <section ref={contactsRef} className="contacts" style={{}}>
+            <section
+                ref={contactsRef}
+                className="contacts"
+                style={{
+                    opacity: isLoaded ? 1 : 0,
+                }}
+            >
                 <p
                     style={{
                         textAlign: "center",
