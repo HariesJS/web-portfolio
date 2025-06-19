@@ -1,13 +1,23 @@
 import {Button} from "@heroui/button"
 import {Card, CardHeader, CardFooter} from "@heroui/card"
 import {Image} from "@heroui/image"
-import {useLayoutEffect, useRef} from "react"
 import {gsap} from "gsap"
-import {motion} from "framer-motion"
+import {useDisclosure} from "@heroui/use-disclosure"
+import {
+    Modal,
+    ModalBody,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+} from "@heroui/modal"
 import {Link} from "@heroui/link"
 import {Theme} from "@/styles/theme"
 import {siteConfig} from "@/config/site"
 import {projectsData} from "../const"
+import {ScrollTrigger} from "gsap/all"
+import {useState} from "react"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const Projects = ({
     projectRef,
@@ -16,6 +26,14 @@ export const Projects = ({
     projectRef: any
     isLoaded: boolean
 }) => {
+    const {isOpen, onOpen, onOpenChange} = useDisclosure()
+    const [activeItem, setActiveItem] = useState<any>(null)
+
+    const handleOpenModal = (item: any) => {
+        setActiveItem(item)
+        onOpen()
+    }
+
     return (
         <section
             ref={projectRef}
@@ -93,8 +111,8 @@ export const Projects = ({
                             e.id === "5" ||
                             e.id === "8" ||
                             e.id === "9"
-                                ? "domino-item w-full h-[300px] col-span-12 sm:col-span-5"
-                                : "domino-item w-full h-[300px] col-span-12 sm:col-span-7"
+                                ? "w-full h-[300px] col-span-12 sm:col-span-5"
+                                : "w-full h-[300px] col-span-12 sm:col-span-7"
                         }
                     >
                         <CardHeader className="absolute z-10 flex-col items-start backdrop-blur-sm bg-black/50">
@@ -120,13 +138,36 @@ export const Projects = ({
                                     </p>
                                 </div>
                             </div>
-                            <Button radius="full" size="sm">
+                            <Button
+                                onPress={() => handleOpenModal(e)}
+                                radius="full"
+                                size="sm"
+                            >
                                 See more
                             </Button>
                         </CardFooter>
                     </Card>
                 ))}
             </div>
+            <Modal
+                backdrop={"blur"}
+                isOpen={isOpen}
+                onOpenChange={onOpenChange}
+            >
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader className="flex flex-col gap-1">
+                                {activeItem.title}
+                            </ModalHeader>
+                            <ModalBody>
+                                <p>{activeItem.description}</p>
+                            </ModalBody>
+                            <ModalFooter></ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
         </section>
     )
 }

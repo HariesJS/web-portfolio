@@ -89,6 +89,7 @@ export const projectsData = [
             "Smart tips & menu in one tap. Manage orders, receive tips — all in one place. One platform to serve, tip and shine.",
         image: "/images/tippy.png",
         aboutContent: "Description and videos",
+        // media: ['/images/example/image/']
     },
     {
         id: "2",
@@ -105,6 +106,7 @@ export const projectsData = [
             "'Mecenate' is a community of people of art. The platform for the authors who create, and patrons who give talents the opportunity to open.",
         image: "/images/mecenate.png",
         aboutContent: "Description, screenshots and videos",
+        media: ["/images/example/mecenate.png", "/video/example/mecenate1.mp4"],
     },
     {
         id: "4",
