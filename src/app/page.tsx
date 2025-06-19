@@ -121,8 +121,11 @@ export default function Home() {
         gsap.to(window, {
             duration: 1,
             scrollTo: {
-                y: contentRef.current?.offsetTop - rect.height,
-                // y: contentRef.current?.offsetTop,
+                // y: contentRef.current?.offsetTop - rect.height,
+                y:
+                    contentRef.current.offsetTop +
+                    contentRef.current.offsetHeight -
+                    window.innerHeight,
                 offsetY: 0,
             },
             ease: "power2.inOut",
@@ -216,7 +219,16 @@ export default function Home() {
                     padding: 20px;
                     display: flex;
                     flex-direction: column;
-                    // justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                }
+
+                .projects {
+                    position: relative;
+                    width: 100%;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
                     overflow: hidden;
                 }

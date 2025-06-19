@@ -1,6 +1,8 @@
 import {Button} from "@heroui/button"
 import {Card, CardHeader, CardFooter} from "@heroui/card"
 import {Image} from "@heroui/image"
+import {useLayoutEffect, useRef} from "react"
+import {gsap} from "gsap"
 
 export const Projects = ({
     projectRef,
@@ -9,6 +11,18 @@ export const Projects = ({
     projectRef: any
     isLoaded: boolean
 }) => {
+    const listRef = useRef(null)
+
+    useLayoutEffect(() => {
+        gsap.from(".domino-item", {
+            opacity: 0,
+            // y: 50,
+            stagger: 0.5, // 👈 интервал 0.5 сек
+            duration: 0.3,
+            ease: "power2.out",
+        })
+    }, [])
+
     const projectsData = [
         {
             id: "1",
@@ -84,7 +98,7 @@ export const Projects = ({
     return (
         <section
             ref={projectRef}
-            className="section"
+            className="projects"
             style={{
                 opacity: isLoaded ? 1 : 0,
             }}
@@ -120,6 +134,7 @@ export const Projects = ({
             <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
                 {projectsData.map((e, i) => (
                     <Card
+                        ref={listRef}
                         key={e.id}
                         isFooterBlurred
                         className={
@@ -128,8 +143,8 @@ export const Projects = ({
                             e.id === "5" ||
                             e.id === "8" ||
                             e.id === "9"
-                                ? "w-full h-[300px] col-span-12 sm:col-span-5"
-                                : "w-full h-[300px] col-span-12 sm:col-span-7"
+                                ? "domino-item w-full h-[300px] col-span-12 sm:col-span-5"
+                                : "domino-item w-full h-[300px] col-span-12 sm:col-span-7"
                         }
                     >
                         <CardHeader className="absolute z-10 flex-col items-start backdrop-blur-sm bg-black/50">
