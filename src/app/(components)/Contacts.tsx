@@ -53,7 +53,7 @@ export const Contacts = ({
                 >
                     <span style={{fontWeight: "bold"}}>GitHub:</span>{" "}
                     <Link
-                        href={"https://github.com/HariesJS"}
+                        href={siteConfig.links.github}
                         target="_blank"
                         style={{
                             textDecoration: "underline",
@@ -73,7 +73,7 @@ export const Contacts = ({
                 >
                     <span style={{fontWeight: "bold"}}>LinkedIn:</span>{" "}
                     <Link
-                        href={"https://www.linkedin.com/in/evgeniy-chepurnoy/"}
+                        href={siteConfig.links.linkedIn}
                         target="_blank"
                         style={{
                             textDecoration: "underline",
@@ -93,7 +93,7 @@ export const Contacts = ({
                 >
                     <span style={{fontWeight: "bold"}}>Telegram:</span>{" "}
                     <Link
-                        href={"https://t.me/evg_9"}
+                        href={siteConfig.links.telegram}
                         target="_blank"
                         style={{
                             textDecoration: "underline",
@@ -113,7 +113,7 @@ export const Contacts = ({
                 >
                     <span style={{fontWeight: "bold"}}>Email:</span>{" "}
                     <Link
-                        href={"mailto:lofmty@gmail.com"}
+                        href={siteConfig.links.mail}
                         target="_blank"
                         style={{
                             textDecoration: "underline",
@@ -124,14 +124,7 @@ export const Contacts = ({
                     </Link>
                 </div>
             </div>
-            <Button
-                onPress={() =>
-                    window.open(
-                        "https://drive.google.com/file/d/1Ztt6FnJIfCC3z1halzsDF1XcDWLevlQR/view?pli=1",
-                        "_blank"
-                    )
-                }
-            >
+            <Button onPress={() => window.open(siteConfig.links.cv, "_blank")}>
                 Download CV
             </Button>
             <div

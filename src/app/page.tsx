@@ -117,11 +117,9 @@ export default function Home() {
     }
 
     const scrollToContent = () => {
-        const rect = projectRef.current.getBoundingClientRect()
         gsap.to(window, {
             duration: 1,
             scrollTo: {
-                // y: contentRef.current?.offsetTop - rect.height,
                 y:
                     contentRef.current.offsetTop +
                     contentRef.current.offsetHeight -

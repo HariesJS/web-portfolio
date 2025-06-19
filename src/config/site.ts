@@ -53,5 +53,6 @@ export const siteConfig = {
         linkedIn: "https://www.linkedin.com/in/evgeniy-chepurnoy/",
         telegram: "https://t.me/evg_9",
         mail: "mailto:lofmty@gmail.com",
+        cv: "https://drive.google.com/file/d/1Ztt6FnJIfCC3z1halzsDF1XcDWLevlQR/view?pli=1",
     },
 }

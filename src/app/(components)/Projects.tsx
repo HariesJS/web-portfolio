@@ -3,6 +3,11 @@ import {Card, CardHeader, CardFooter} from "@heroui/card"
 import {Image} from "@heroui/image"
 import {useLayoutEffect, useRef} from "react"
 import {gsap} from "gsap"
+import {motion} from "framer-motion"
+import {Link} from "@heroui/link"
+import {Theme} from "@/styles/theme"
+import {siteConfig} from "@/config/site"
+import {projectsData} from "../const"
 
 export const Projects = ({
     projectRef,
@@ -11,90 +16,6 @@ export const Projects = ({
     projectRef: any
     isLoaded: boolean
 }) => {
-    const listRef = useRef(null)
-
-    useLayoutEffect(() => {
-        gsap.from(".domino-item", {
-            opacity: 0,
-            // y: 50,
-            stagger: 0.5, // 👈 интервал 0.5 сек
-            duration: 0.3,
-            ease: "power2.out",
-        })
-    }, [])
-
-    const projectsData = [
-        {
-            id: "1",
-            title: "Tippy",
-            description:
-                "Smart tips & menu in one tap. Manage orders, receive tips — all in one place. One platform to serve, tip and shine.",
-            image: "/images/tippy.png",
-        },
-        {
-            id: "2",
-            title: "SMS Virtual",
-            description:
-                "Get verification SMS messages or calls for any online service without exposing your personal phone number and protect your privacy.",
-            image: "/images/smsVirtual.png",
-        },
-        {
-            id: "3",
-            title: "Mecenate",
-            description:
-                "'Mecenate' is a community of people of art. The platform for the authors who create, and patrons who give talents the opportunity to open.",
-            image: "/images/mecenate.png",
-        },
-        {
-            id: "4",
-            title: "Wiggle",
-            description:
-                "Wiggle is your ultimate companion for navigating the vibrant world of nightclubs, pubs and people.",
-            image: "/images/wiggle.png",
-        },
-        {
-            id: "5",
-            title: "Riturnit",
-            description:
-                "Riturnit is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes.",
-            image: "/images/riturnit.png",
-        },
-        {
-            id: "6",
-            title: "Cart Scoot Web",
-            description:
-                "Navigate Life, Share the Ride: Your Journey, Your Community",
-            image: "/images/cartscootweb.png",
-        },
-        {
-            id: "7",
-            title: "Cleaning Company",
-            description: "Your trusted cleaning company partner",
-            image: "/images/cleaningcompany.png",
-        },
-        {
-            id: "8",
-            title: "Lumm",
-            description:
-                "Lumm is the Web3 application on which you can store NFT, trade on marketplace and connect cryptowallets.",
-            image: "/images/lumm.png",
-        },
-        {
-            id: "9",
-            title: "Viround (mobile)",
-            description:
-                "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
-            image: "/images/viround.png",
-        },
-        {
-            id: "10",
-            title: "Viround (web)",
-            description:
-                "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
-            image: "/images/viroundweb.png",
-        },
-    ]
-
     return (
         <section
             ref={projectRef}
@@ -103,7 +24,7 @@ export const Projects = ({
                 opacity: isLoaded ? 1 : 0,
             }}
         >
-            <div>
+            <div style={{marginBottom: "5%"}}>
                 <p
                     style={{
                         textAlign: "center",
@@ -114,27 +35,56 @@ export const Projects = ({
                 >
                     Projects
                 </p>
-                <p
+                <div
                     style={{
                         textAlign: "center",
-                        fontSize: 20,
-                        marginTop: 20,
+                        backdropFilter: "blur(10px)",
+                        backgroundColor: "rgba(255, 255, 255, 0.1)", // полупрозрачный фон
+                        padding: "20px",
+                        borderRadius: "12px",
+                        marginLeft: "15%",
+                        marginRight: "15%",
                     }}
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Omnis nam tenetur voluptate atque dicta architecto veniam,
-                    at fuga quibusdam magni fugit delectus temporibus iure totam
-                    suscipit hic! Eum, quas. Placeat!
-                </p>
+                    <p
+                        style={{
+                            textAlign: "center",
+                            fontSize: 20,
+                            marginTop: 20,
+                        }}
+                    >
+                        {`Complete information about all the projects on which I worked and the experience can be found in my `}
+                        <Link
+                            style={{
+                                color: Theme.mainColors.yellow,
+                                textDecoration: "underline",
+                                fontWeight: "bold",
+                                fontSize: 20,
+                            }}
+                            target="_blank"
+                            href={siteConfig.links.cv}
+                        >
+                            CV
+                        </Link>
+                        .
+                    </p>
+                    <p
+                        style={{
+                            marginTop: 20,
+                            fontSize: 20,
+                            marginLeft: "15%",
+                            marginRight: "15%",
+                            textAlign: "center",
+                        }}
+                    >
+                        {`Here are the results of some projects with which I worked (the
+                most interesting projects are shown here)`}
+                    </p>
+                </div>
             </div>
-            <p style={{marginTop: 20, marginBottom: 20, fontSize: 20}}>
-                Here are the results of some projects with which I worked (the
-                most interesting projects are shown here)
-            </p>
             <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
                 {projectsData.map((e, i) => (
                     <Card
-                        ref={listRef}
                         key={e.id}
                         isFooterBlurred
                         className={
@@ -166,10 +116,7 @@ export const Projects = ({
                             <div className="flex flex-grow gap-2 items-center">
                                 <div className="flex flex-col">
                                     <p className="text-tiny text-white/60">
-                                        Description, Screenshots
-                                    </p>
-                                    <p className="text-tiny text-white/60">
-                                        and videos
+                                        {e.aboutContent}
                                     </p>
                                 </div>
                             </div>

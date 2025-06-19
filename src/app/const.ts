@@ -80,3 +80,85 @@ export const skillsData = [
         image: "/images/solidity.png",
     },
 ]
+
+export const projectsData = [
+    {
+        id: "1",
+        title: "Tippy",
+        description:
+            "Smart tips & menu in one tap. Manage orders, receive tips — all in one place. One platform to serve, tip and shine.",
+        image: "/images/tippy.png",
+        aboutContent: "Description and videos",
+    },
+    {
+        id: "2",
+        title: "SMS Virtual",
+        description:
+            "Get verification SMS messages or calls for any online service without exposing your personal phone number and protect your privacy.",
+        image: "/images/smsVirtual.png",
+        aboutContent: "Description and videos",
+    },
+    {
+        id: "3",
+        title: "Mecenate",
+        description:
+            "'Mecenate' is a community of people of art. The platform for the authors who create, and patrons who give talents the opportunity to open.",
+        image: "/images/mecenate.png",
+        aboutContent: "Description, screenshots and videos",
+    },
+    {
+        id: "4",
+        title: "Wiggle",
+        description:
+            "Wiggle is your ultimate companion for navigating the vibrant world of nightclubs, pubs and people.",
+        image: "/images/wiggle.png",
+        aboutContent: "Description and video",
+    },
+    {
+        id: "5",
+        title: "Riturnit",
+        description:
+            "Riturnit is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes.",
+        image: "/images/riturnit.png",
+        aboutContent: "Description and videos",
+    },
+    {
+        id: "6",
+        title: "Cart Scoot Web",
+        description:
+            "Navigate Life, Share the Ride: Your Journey, Your Community.",
+        image: "/images/cartscootweb.png",
+        aboutContent: "Description and screenshots",
+    },
+    {
+        id: "7",
+        title: "Cleaning Company",
+        description: "Your trusted cleaning company partner.",
+        image: "/images/cleaningcompany.png",
+        aboutContent: "Description and screenshots",
+    },
+    {
+        id: "8",
+        title: "Lumm",
+        description:
+            "Lumm is the Web3 application on which you can store NFT, trade on marketplace and connect cryptowallets.",
+        image: "/images/lumm.png",
+        aboutContent: "Description and video",
+    },
+    {
+        id: "9",
+        title: "Viround (mobile)",
+        description:
+            "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+        image: "/images/viround.png",
+        aboutContent: "Description and screenshots",
+    },
+    {
+        id: "10",
+        title: "Viround (web)",
+        description:
+            "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+        image: "/images/viroundweb.png",
+        aboutContent: "Description and screenshot",
+    },
+]
