@@ -20,11 +20,12 @@ import {
     MailIcon,
     TelegramIcon,
 } from "@/components/Header/icons"
-import {useTranslations} from "next-intl"
+import {useLocale, useTranslations} from "next-intl"
 import PublicNavigationLocaleSwitcher from "../PublicNavigationLocaleSwitcher"
 
 export const Header = ({buttonsData}: {buttonsData: any[]}) => {
     const t = useTranslations("Header")
+    const locale = useLocale()
 
     return (
         <HeroUINavbar
@@ -40,7 +41,7 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                 <NavbarBrand as="li" className="gap-3 max-w-fit">
                     <NextLink
                         className="flex justify-start items-center gap-1"
-                        href="/"
+                        href={`/${locale}`}
                     >
                         <CodeIcon />
                         <p className="font-bold text-inherit">
