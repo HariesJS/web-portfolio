@@ -16,7 +16,8 @@ import {Theme} from "@/styles/theme"
 import {siteConfig} from "@/config/site"
 import {projectsData} from "../const"
 import {ScrollTrigger} from "gsap/all"
-import {useEffect, useRef, useState} from "react"
+import {useState} from "react"
+import {Media} from "@/components/Media"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -200,38 +201,7 @@ export const Projects = ({
                                                         overflow: "hidden",
                                                     }}
                                                 >
-                                                    {item.path.includes(
-                                                        "mp4"
-                                                    ) ? (
-                                                        <video
-                                                            src={item.path}
-                                                            controls
-                                                            autoPlay={true}
-                                                            muted={true}
-                                                            style={{
-                                                                width: "100%",
-                                                                height: 300,
-                                                                borderRadius:
-                                                                    "12px",
-                                                            }}
-                                                        />
-                                                    ) : (
-                                                        <Image
-                                                            src={item.path}
-                                                            isBlurred={true}
-                                                            style={{
-                                                                width: "100%",
-                                                                height: 300,
-                                                                borderRadius:
-                                                                    "12px",
-                                                                aspectRatio:
-                                                                    "16 / 9",
-                                                                // height: "auto",
-                                                                objectFit:
-                                                                    "contain",
-                                                            }}
-                                                        />
-                                                    )}
+                                                    <Media item={item} />
                                                 </CardBody>
                                             </Card>
                                         </Tab>

@@ -307,14 +307,10 @@ export const projectsData = [
             },
             {
                 id: "8",
-                path: "/example/images/viround9367.png",
-            },
-            {
-                id: "9",
                 path: "/example/images/viround9368.png",
             },
             {
-                id: "10",
+                id: "9",
                 path: "/example/images/viround9369.png",
             },
         ],
