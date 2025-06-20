@@ -1,16 +1,3 @@
-// import {defineRouting} from "next-intl/routing"
-
-// export const routing = defineRouting({
-//     // A list of all locales that are supported
-//     locales: ["en", "ru", "ua"],
-
-//     // Used when no locale matches
-//     defaultLocale: "en",
-//     // Отключаем автоопределение локали через headers/cookies
-//     localeDetection: false,
-//     // Явно указываем стратегию для статики
-// })
-
 import {defineRouting} from "next-intl/routing"
 import {defaultLocale, locales} from "../config"
 

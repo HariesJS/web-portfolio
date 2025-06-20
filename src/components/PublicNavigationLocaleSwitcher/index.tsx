@@ -1,6 +1,5 @@
 "use client"
 
-import {Link, usePathname} from "@/i18n/navigation"
 import {Theme} from "@/styles/theme"
 import {
     Dropdown,
@@ -8,10 +7,27 @@ import {
     DropdownMenu,
     DropdownTrigger,
 } from "@heroui/dropdown"
-import {Locale, useLocale} from "next-intl"
+import {useLocale} from "next-intl"
+import {useMemo, useState} from "react"
+import {usePathname, useRouter} from "next/navigation"
 
 export default function PublicNavigationLocaleSwitcher() {
     const locale = useLocale()
+    const pathname = usePathname()
+
+    const router = useRouter()
+
+    const [selectedKeys, setSelectedKeys] = useState(new Set([locale]))
+
+    const selectedValue = useMemo(
+        () => Array.from(selectedKeys).join(", ").replace(/_/g, ""),
+        [selectedKeys]
+    )
+
+    const isActive = (lang: string) =>
+        lang === selectedValue
+            ? Theme.mainColors.yellow
+            : Theme.mainColors.white
 
     return (
         <Dropdown>
@@ -23,39 +39,34 @@ export default function PublicNavigationLocaleSwitcher() {
                         color: Theme.mainColors.yellow,
                     }}
                 >
-                    {locale}
+                    {selectedValue}
                 </span>
             </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-                <DropdownItem key="en">
-                    <LocaleLink locale="en" />
+            <DropdownMenu
+                disallowEmptySelection
+                aria-label="Select Language"
+                selectedKeys={selectedKeys}
+                selectionMode="single"
+                variant="flat"
+                onChange={(e) => console.log(e)}
+                onSelectionChange={(e) => {
+                    setSelectedKeys(e as never)
+                    const segments: any = pathname.split("/")
+                    segments[1] = e?.currentKey
+                    const newPath = segments.join("/")
+                    router.push(newPath)
+                }}
+            >
+                <DropdownItem style={{color: isActive("en")}} key="en">
+                    EN
                 </DropdownItem>
-                <DropdownItem key="ru">
-                    <LocaleLink locale="ru" />
+                <DropdownItem style={{color: isActive("ru")}} key="ru">
+                    RU
                 </DropdownItem>
-                <DropdownItem key="ua">
-                    <LocaleLink locale="ua" />
+                <DropdownItem style={{color: isActive("ua")}} key="ua">
+                    UA
                 </DropdownItem>
             </DropdownMenu>
         </Dropdown>
-    )
-}
-
-function LocaleLink({locale}: {locale: Locale}) {
-    const pathname = usePathname()
-    const isActive = useLocale() === locale
-
-    return (
-        <Link
-            style={{
-                color: isActive
-                    ? Theme.mainColors.yellow
-                    : Theme.mainColors.white,
-            }}
-            href={pathname}
-            locale={locale}
-        >
-            {locale.toUpperCase()}
-        </Link>
     )
 }
