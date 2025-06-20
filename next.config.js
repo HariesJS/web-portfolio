@@ -10,6 +10,9 @@ let nextConfig = {
         ignoreDuringBuilds: true,
     },
     export: "output",
+    images: {
+        unoptimized: true,
+    },
 }
 
 if (!isExport) {
