@@ -10,6 +10,8 @@ export async function generateStaticParams() {
     return [{locale: "en"}, {locale: "ru"}, {locale: "ua"}]
 }
 
+export const dynamic = "force-dynamic"
+
 export default function Home() {
     return <HomePage />
 }
