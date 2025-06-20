@@ -157,7 +157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/fast-memoize@npm:2.2.7":
+"@formatjs/fast-memoize@npm:2.2.7, @formatjs/fast-memoize@npm:^2.2.0":
   version: 2.2.7
   resolution: "@formatjs/fast-memoize@npm:2.2.7"
   dependencies:
@@ -193,6 +193,15 @@ __metadata:
   dependencies:
     tslib: ^2.8.0
   checksum: 1c7e67f079f18bfd25f42d7f32bcb829d79708dba58408807e2b81ce16da812f48d958e0ad51af37faa8080042bc927dcf5b2cef63954316882d4cc007f53077
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl-localematcher@npm:^0.5.4":
+  version: 0.5.10
+  resolution: "@formatjs/intl-localematcher@npm:0.5.10"
+  dependencies:
+    tslib: 2
+  checksum: b36b66e2c81ef9e8b99be784a317c74364c8b6b396e0e1be259fbafda41403c40aec14241efcc4e556580e20f5b71e20351d110cd63e447330d3936d156ebb29
   languageName: node
   linkType: hard
 
@@ -2377,6 +2386,13 @@ __metadata:
   version: 1.11.0
   resolution: "@rushstack/eslint-patch@npm:1.11.0"
   checksum: d1d7e4d36c693b93c06b25022df094ef629b53805db2c7a7ecbb099c34ea525eb96c19f6e5ea5ad1f8b69aba6792cfd8cdd410655b6aa9da15c69c4593019bfc
+  languageName: node
+  linkType: hard
+
+"@schummar/icu-type-parser@npm:1.21.5":
+  version: 1.21.5
+  resolution: "@schummar/icu-type-parser@npm:1.21.5"
+  checksum: 41a8467a9dae149599d4ada1f82cc3dab03e394e82aef2744f46e6b9b7e5d8cc341a3cbbb9a75a7def795d30c877bfd976176516e2c14de8191c535dcac1b816
   languageName: node
   linkType: hard
 
@@ -5136,7 +5152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:10.7.16, intl-messageformat@npm:^10.1.0":
+"intl-messageformat@npm:10.7.16, intl-messageformat@npm:^10.1.0, intl-messageformat@npm:^10.5.14":
   version: 10.7.16
   resolution: "intl-messageformat@npm:10.7.16"
   dependencies:
@@ -5909,6 +5925,7 @@ __metadata:
     gsap: ^3.13.0
     intl-messageformat: 10.7.16
     next: 15.3.1
+    next-intl: ^4.1.0
     next-themes: 0.4.6
     postcss: 8.5.3
     prettier: 3.5.3
@@ -5920,6 +5937,24 @@ __metadata:
     typescript: 5.6.3
   languageName: unknown
   linkType: soft
+
+"next-intl@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "next-intl@npm:4.1.0"
+  dependencies:
+    "@formatjs/intl-localematcher": ^0.5.4
+    negotiator: ^1.0.0
+    use-intl: ^4.1.0
+  peerDependencies:
+    next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+    typescript: ^5.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 6b51bf7a5e3185384da30e763cddf95a883299eb8979ec4fee5389118c8a5caa5fe76f28e3160081c0526f25488a3ad7fd71825a32c829a540b825a51ee685a4
+  languageName: node
+  linkType: hard
 
 "next-themes@npm:0.4.6":
   version: 0.4.6
@@ -7301,7 +7336,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.8.0":
+"tslib@npm:2, tslib@npm:^2.4.0, tslib@npm:^2.8.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: e4aba30e632b8c8902b47587fd13345e2827fa639e7c3121074d5ee0880723282411a8838f830b55100cbe4517672f84a2472667d355b81e8af165a55dc6203a
@@ -7547,6 +7582,19 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 6968fe85e7a1721e977e7bff8d98ac0975522a380aa23190fe855767bd4d91a73138225a984ddeb90448c00451fb53fa54197b922d21753cd2e2765bd47143a9
+  languageName: node
+  linkType: hard
+
+"use-intl@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "use-intl@npm:4.1.0"
+  dependencies:
+    "@formatjs/fast-memoize": ^2.2.0
+    "@schummar/icu-type-parser": 1.21.5
+    intl-messageformat: ^10.5.14
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+  checksum: 80aedd15e71ffc496830af2b0b29e2d956df8981ef5378710f98114de7b7a4d20952fa4c5ee05eeef7d344710b9ce9b25b6bdf99872fe04c7b2944953dd5aab7
   languageName: node
   linkType: hard
 

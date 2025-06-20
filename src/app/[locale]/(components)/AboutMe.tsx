@@ -1,7 +1,10 @@
 import {BottomIcon} from "@/components/Header/icons"
 import {motion} from "framer-motion"
+import {useTranslations} from "next-intl"
 
 export const AboutMe = () => {
+    const t = useTranslations("HomePage")
+
     const text = "Evgeniy Chepurnoy"
 
     const container = {
@@ -48,6 +51,7 @@ export const AboutMe = () => {
                         fontSize: 30,
                     }}
                 >
+                    {t("title")} |
                     {text.split("").map((char, index) => (
                         <motion.span
                             key={index}
