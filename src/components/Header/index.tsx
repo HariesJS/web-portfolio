@@ -143,6 +143,9 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                     <DropdownItem key="ru" onPress={() => changeLanguage("ru")}>
                         RU
                     </DropdownItem>
+                    <DropdownItem key="ua" onPress={() => changeLanguage("ua")}>
+                        UA
+                    </DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
