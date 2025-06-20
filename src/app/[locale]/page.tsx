@@ -6,11 +6,11 @@ import HomePage from "./(components)/HomePage"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+export const dynamic = "force-static"
+
 export async function generateStaticParams() {
     return [{locale: "en"}, {locale: "ru"}, {locale: "ua"}]
 }
-
-// export const dynamic = "force-static"
 
 export default function Home() {
     return <HomePage />
