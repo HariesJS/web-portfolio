@@ -14,6 +14,10 @@ import {Contacts} from "./(components)/Contacts"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
+export async function generateStaticParams() {
+    return [{locale: "en"}, {locale: "ru"}, {locale: "ua"}]
+}
+
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false)
     const [isShowTopButton, setIsShowTopButton] = useState(false)
