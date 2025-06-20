@@ -9,6 +9,12 @@ import {
 } from "@heroui/navbar"
 import {Link} from "@heroui/link"
 import {link as linkStyles} from "@heroui/theme"
+import {
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+} from "@heroui/dropdown"
 import NextLink from "next/link"
 import clsx from "clsx"
 
@@ -20,8 +26,27 @@ import {
     MailIcon,
     TelegramIcon,
 } from "@/components/Header/icons"
+import {useLocale, useTranslations} from "next-intl"
+import {usePathname, useRouter} from "next/navigation"
+import {Theme} from "@/styles/theme"
 
 export const Header = ({buttonsData}: {buttonsData: any[]}) => {
+    const t = useTranslations("Header")
+
+    const router = useRouter()
+    const pathname = usePathname()
+    const locale = useLocale()
+
+    const changeLanguage = (newLocale: string) => {
+        const segments = pathname.split("/")
+        segments[1] = newLocale
+        const newPath = segments.join("/")
+        router.push(newPath)
+        setTimeout(() => {
+            window.location.reload()
+        }, 350)
+    }
+
     return (
         <HeroUINavbar
             maxWidth="xl"
@@ -40,7 +65,7 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                     >
                         <CodeIcon />
                         <p className="font-bold text-inherit">
-                            Evgeniy Chepurnoy
+                            {t("username")}
                         </p>
                     </NextLink>
                 </NavbarBrand>
@@ -58,13 +83,12 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                                     cursor: "pointer",
                                 }}
                             >
-                                {item.label}
+                                {t(item.label)}
                             </Link>
                         </NavbarItem>
                     ))}
                 </ul>
             </NavbarContent>
-
             <NavbarContent
                 className="hidden sm:flex basis-1/5 sm:basis-full"
                 justify="end"
@@ -100,7 +124,27 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                     </Link>
                 </NavbarItem>
             </NavbarContent>
-
+            <Dropdown>
+                <DropdownTrigger>
+                    <span
+                        style={{
+                            textTransform: "uppercase",
+                            cursor: "pointer",
+                            color: Theme.mainColors.yellow,
+                        }}
+                    >
+                        {locale}
+                    </span>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                    <DropdownItem key="en" onPress={() => changeLanguage("en")}>
+                        EN
+                    </DropdownItem>
+                    <DropdownItem key="ru" onPress={() => changeLanguage("ru")}>
+                        RU
+                    </DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <NavbarMenuToggle />
             </NavbarContent>
@@ -114,7 +158,7 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                                 size="lg"
                                 onClick={buttonsData[index]}
                             >
-                                {item.label}
+                                {t(item.label)}
                             </Link>
                         </NavbarMenuItem>
                     ))}

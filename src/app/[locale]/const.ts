@@ -85,10 +85,9 @@ export const projectsData = [
     {
         id: "1",
         title: "Tippy",
-        description:
-            "Smart tips & menu in one tap. Manage orders, receive tips — all in one place. One platform to serve, tip and shine.",
+        description: "Tippy.description",
         image: "/images/tippy.png",
-        aboutContent: "Description and videos",
+        aboutContent: "Tippy.info",
         media: [
             {
                 id: "1",
@@ -131,10 +130,9 @@ export const projectsData = [
     {
         id: "2",
         title: "SMS Virtual",
-        description:
-            "Get verification SMS messages or calls for any online service without exposing your personal phone number and protect your privacy.",
+        description: "SMSVirtual.description",
         image: "/images/smsVirtual.png",
-        aboutContent: "Description and videos",
+        aboutContent: "SMSVirtual.info",
         media: [
             {
                 id: "1",
@@ -157,10 +155,9 @@ export const projectsData = [
     {
         id: "3",
         title: "Mecenate",
-        description:
-            "'Mecenate' is a community of people of art. The platform for the authors who create, and patrons who give talents the opportunity to open.",
+        description: "Mecenate.description",
         image: "/images/mecenate.png",
-        aboutContent: "Description, screenshots and videos",
+        aboutContent: "Mecenate.info",
         media: [
             {
                 id: "1",
@@ -183,10 +180,9 @@ export const projectsData = [
     {
         id: "4",
         title: "Wiggle",
-        description:
-            "Wiggle is your ultimate companion for navigating the vibrant world of nightclubs, pubs and people.",
+        description: "Wiggle.description",
         image: "/images/wiggle.png",
-        aboutContent: "Description and video",
+        aboutContent: "Wiggle.info",
         media: [
             {
                 id: "1",
@@ -197,10 +193,9 @@ export const projectsData = [
     {
         id: "5",
         title: "Riturnit",
-        description:
-            "Riturnit is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes.",
+        description: "Riturnit.description",
         image: "/images/riturnit.png",
-        aboutContent: "Description and videos",
+        aboutContent: "Riturnit.info",
         media: [
             {
                 id: "1",
@@ -215,10 +210,9 @@ export const projectsData = [
     {
         id: "6",
         title: "Cart Scoot Web",
-        description:
-            "Navigate Life, Share the Ride: Your Journey, Your Community.",
+        description: "CartScootWeb.description",
         image: "/images/cartscootweb.png",
-        aboutContent: "Description and screenshots",
+        aboutContent: "CartScootWeb.info",
         media: [
             {
                 id: "1",
@@ -245,9 +239,9 @@ export const projectsData = [
     {
         id: "7",
         title: "Cleaning Company",
-        description: "Your trusted cleaning company partner.",
+        description: "CleaningCompany.description",
         image: "/images/cleaningcompany.png",
-        aboutContent: "Description and screenshot",
+        aboutContent: "CleaningCompany.info",
         media: [
             {
                 id: "1",
@@ -258,10 +252,9 @@ export const projectsData = [
     {
         id: "8",
         title: "Lumm",
-        description:
-            "Lumm is the Web3 application on which you can store NFT, trade on marketplace and connect cryptowallets.",
+        description: "Lumm.description",
         image: "/images/lumm.png",
-        aboutContent: "Description and video",
+        aboutContent: "Lumm.info",
         media: [
             {
                 id: "1",
@@ -272,10 +265,9 @@ export const projectsData = [
     {
         id: "9",
         title: "Viround (mobile)",
-        description:
-            "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+        description: "Viround_m.description",
         image: "/images/viround.png",
-        aboutContent: "Description and screenshots",
+        aboutContent: "Viround_m.info",
         media: [
             {
                 id: "1",
@@ -318,10 +310,9 @@ export const projectsData = [
     {
         id: "10",
         title: "Viround (web)",
-        description:
-            "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+        description: "Viround_w.description",
         image: "/images/viroundweb.png",
-        aboutContent: "Description and screenshot",
+        aboutContent: "Viround_w.info",
         media: [
             {
                 id: "1",

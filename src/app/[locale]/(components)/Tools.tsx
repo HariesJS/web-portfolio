@@ -1,6 +1,7 @@
 import {Theme} from "@/styles/theme"
 import {Accordion, AccordionItem} from "@heroui/accordion"
 import {Code} from "@heroui/code"
+import {useTranslations} from "next-intl"
 
 export const Tools = ({
     toolsRef,
@@ -9,6 +10,8 @@ export const Tools = ({
     toolsRef: any
     isLoaded: boolean
 }) => {
+    const t = useTranslations("Tools")
+
     return (
         <section
             ref={toolsRef}
@@ -25,7 +28,7 @@ export const Tools = ({
                     marginTop: "5%",
                 }}
             >
-                Tools
+                {t("tools")}
             </p>
             <p
                 style={{
@@ -34,11 +37,11 @@ export const Tools = ({
                     textAlign: "center",
                 }}
             >
-                In the work I use the{" "}
+                {t("inWorkIUse")}{" "}
                 <span style={{color: Theme.mainColors.yellow}}>
                     MacBook Pro 14 M4 Pro 2024
                 </span>
-                , on which I use the following tools in development:
+                , {t("whichI")}
             </p>
             <div
                 style={{
@@ -58,7 +61,7 @@ export const Tools = ({
                     >
                         Visual Studio Code
                     </span>
-                    {" or "}
+                    {` ${t("or")} `}
                     <span
                         style={{
                             fontWeight: "bold",
@@ -67,7 +70,7 @@ export const Tools = ({
                     >
                         Webstorm
                     </span>{" "}
-                    for code edit
+                    {t("ide")}
                 </p>
                 <p style={{marginTop: 10, marginBottom: 10}}>
                     <span
@@ -78,7 +81,7 @@ export const Tools = ({
                     >
                         XCode
                     </span>{" "}
-                    for iOS Builds
+                    {t("xcode_build")}
                 </p>
                 <p>
                     <span
@@ -89,7 +92,7 @@ export const Tools = ({
                     >
                         Android Studio
                     </span>{" "}
-                    for Android Builds
+                    {t("as_builds")}
                 </p>
                 <p style={{marginTop: 10}}>
                     <span
@@ -100,11 +103,11 @@ export const Tools = ({
                     >
                         Figma
                     </span>{" "}
-                    for design
+                    {t("figma_for")}
                 </p>
             </div>
             <p style={{fontSize: 20, marginTop: 20, marginBottom: 20}}>
-                Usually I'm used next packages
+                {t("description")}
             </p>
             <Accordion
                 style={{
@@ -116,8 +119,8 @@ export const Tools = ({
             >
                 <AccordionItem
                     key="1"
-                    aria-label="For Web (ReactJS/NextJS)"
-                    title="For Web (ReactJS/NextJS)"
+                    aria-label={`${t("for_web")} (ReactJS/NextJS)`}
+                    title={`${t("for_web")} (ReactJS/NextJS)`}
                 >
                     <div className="flex flex-wrap gap-4">
                         <Code color="primary">ant-design</Code>
@@ -148,8 +151,8 @@ export const Tools = ({
                 </AccordionItem>
                 <AccordionItem
                     key="2"
-                    aria-label="For Mobile (React Native CLI/Expo)"
-                    title="For Mobile (React Native CLI/Expo)"
+                    aria-label={`${t("for_mobile")} (React Native CLI/Expo)`}
+                    title={`${t("for_mobile")} (React Native CLI/Expo)`}
                 >
                     <div className="flex flex-wrap gap-4">
                         <Code color="success">react-navigation</Code>

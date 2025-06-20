@@ -3,9 +3,9 @@ import {motion} from "framer-motion"
 import {useTranslations} from "next-intl"
 
 export const AboutMe = () => {
-    const t = useTranslations("HomePage")
+    const t = useTranslations("AboutMe")
 
-    const text = "Evgeniy Chepurnoy"
+    const text = t("username")
 
     const container = {
         hidden: {opacity: 0},
@@ -51,7 +51,6 @@ export const AboutMe = () => {
                         fontSize: 30,
                     }}
                 >
-                    {t("title")} |
                     {text.split("").map((char, index) => (
                         <motion.span
                             key={index}
@@ -74,7 +73,7 @@ export const AboutMe = () => {
                         marginRight: "20%",
                     }}
                 >
-                    {`6 and a half years experience in programming, 5,6+ years experience on real projects. Worked both in start-ups and in a large company. I have mentored and trained others and was a team leader on several projects.`}
+                    {t("about")}
                 </p>
                 <motion.div
                     initial={{y: 0}}

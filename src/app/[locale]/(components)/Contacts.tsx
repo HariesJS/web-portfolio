@@ -8,6 +8,7 @@ import {
 import {siteConfig} from "@/config/site"
 import {Theme} from "@/styles/theme"
 import {Link} from "@heroui/link"
+import {useTranslations} from "next-intl"
 
 export const Contacts = ({
     contactsRef,
@@ -16,6 +17,8 @@ export const Contacts = ({
     contactsRef: any
     isLoaded: boolean
 }) => {
+    const t = useTranslations("Contacts")
+
     return (
         <section
             ref={contactsRef}
@@ -31,7 +34,7 @@ export const Contacts = ({
                     marginBottom: 10,
                 }}
             >
-                Contacts
+                {t("contacts")}
             </p>
             <div
                 style={{
@@ -125,7 +128,7 @@ export const Contacts = ({
                 </div>
             </div>
             <Button onPress={() => window.open(siteConfig.links.cv, "_blank")}>
-                Download CV
+                {t("download_cv")}
             </Button>
             <div
                 className="backdrop-blur-sm bg-black/50"

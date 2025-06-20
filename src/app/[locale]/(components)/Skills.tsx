@@ -1,5 +1,6 @@
 import {Image} from "@heroui/image"
 import {skillsData} from "../const"
+import {useTranslations} from "next-intl"
 
 export const Skills = ({
     isLoaded,
@@ -10,6 +11,8 @@ export const Skills = ({
     skillsRef: any
     skillsContainerRef: any
 }) => {
+    const t = useTranslations("Skills")
+
     return (
         <section
             className="section content"
@@ -26,7 +29,7 @@ export const Skills = ({
                         marginBottom: 10,
                     }}
                 >
-                    Skills
+                    {t("skills")}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                     {skillsData.map((item, i) => (

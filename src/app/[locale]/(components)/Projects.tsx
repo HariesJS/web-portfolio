@@ -18,6 +18,7 @@ import {projectsData} from "../const"
 import {ScrollTrigger} from "gsap/all"
 import {useState} from "react"
 import {Media} from "@/components/Media"
+import {useTranslations} from "next-intl"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,6 +29,8 @@ export const Projects = ({
     projectRef: any
     isLoaded: boolean
 }) => {
+    const t = useTranslations("Projects")
+
     const {isOpen, onOpen, onOpenChange} = useDisclosure()
     const [activeItem, setActiveItem] = useState<any>(null)
 
@@ -53,7 +56,7 @@ export const Projects = ({
                         marginTop: "5%",
                     }}
                 >
-                    Projects
+                    {t("projects")}
                 </p>
                 <div
                     style={{
@@ -71,7 +74,7 @@ export const Projects = ({
                             marginTop: 20,
                         }}
                     >
-                        {`Complete information about all the projects on which I worked and the experience can be found in my `}
+                        {t("description_first")}{" "}
                         <Link
                             style={{
                                 color: Theme.mainColors.yellow,
@@ -82,7 +85,7 @@ export const Projects = ({
                             target="_blank"
                             href={siteConfig.links.cv}
                         >
-                            CV
+                            {"CV"}
                         </Link>
                         .
                     </p>
@@ -95,8 +98,7 @@ export const Projects = ({
                             textAlign: "center",
                         }}
                     >
-                        {`Here are the results of some projects with which I worked (the
-                most interesting projects are shown here)`}
+                        {t("description_last")}
                     </p>
                 </div>
             </div>
@@ -120,7 +122,7 @@ export const Projects = ({
                                 {e.title}
                             </h4>
                             <p className="text-tiny text-white/60 uppercase font-bold">
-                                {e.description}
+                                {t(e.description)}
                             </p>
                         </CardHeader>
                         <Image
@@ -134,7 +136,7 @@ export const Projects = ({
                             <div className="flex flex-grow gap-2 items-center">
                                 <div className="flex flex-col">
                                     <p className="text-tiny text-white/60">
-                                        {e.aboutContent}
+                                        {t(e.aboutContent)}
                                     </p>
                                 </div>
                             </div>
@@ -143,7 +145,7 @@ export const Projects = ({
                                 radius="full"
                                 size="sm"
                             >
-                                See more
+                                {t("seeMore")}
                             </Button>
                         </CardFooter>
                     </Card>
@@ -181,7 +183,7 @@ export const Projects = ({
                                         textAlign: "center",
                                     }}
                                 >
-                                    {activeItem.description}
+                                    {t(activeItem.description)}
                                 </p>
                                 <Tabs
                                     aria-label="Dynamic tabs"

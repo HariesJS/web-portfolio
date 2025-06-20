@@ -2,49 +2,48 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
     name: "Evgeniy Chepurnoy Portfolio",
-    description:
-        "Make beautiful websites regardless of your design experience.",
+    description: "Front-end Developer",
     navItems: [
         {
-            label: "About Me",
+            label: "aboutMe",
             href: "",
         },
         {
-            label: "Skills",
+            label: "skills",
             href: "",
         },
         {
-            label: "Projects",
+            label: "projects",
             href: "",
         },
         {
-            label: "Tools",
+            label: "tools",
             href: "",
         },
         {
-            label: "Contacts",
+            label: "contacts",
             href: "",
         },
     ],
     navMenuItems: [
         {
-            label: "About Me",
+            label: "aboutMe",
             href: "",
         },
         {
-            label: "Skills",
+            label: "skills",
             href: "",
         },
         {
-            label: "Projects",
+            label: "projects",
             href: "",
         },
         {
-            label: "Tools",
+            label: "tools",
             href: "",
         },
         {
-            label: "Contacts",
+            label: "contacts",
             href: "",
         },
     ],

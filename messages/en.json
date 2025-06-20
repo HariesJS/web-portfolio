@@ -1,6 +1,80 @@
 {
-    "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+    "Header": {
+        "username": "Evgeniy Chepurnoy",
+        "aboutMe": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "tools": "Tools",
+        "contacts": "Contacts"
+    },
+    "AboutMe": {
+        "username": "Evgeniy Chepurnoy",
+        "about": "6 and a half years experience in programming, 5,6+ years experience on real projects. Worked both in start-ups and in a large company. I have mentored and trained others and was a team leader on several projects."
+    },
+    "Skills": {
+        "skills": "Skills"
+    },
+    "Projects": {
+        "projects": "Projects",
+        "description_first": "Complete information about all the projects on which I worked and the experience can be found in my",
+        "description_last": "Here are the results of some projects with which I worked (the most interesting projects are shown here)",
+        "seeMore": "See more",
+        "Tippy": {
+            "description": "Smart tips & menu in one tap. Manage orders, receive tips — all in one place. One platform to serve, tip and shine.",
+            "info": "Description and videos"
+        },
+        "SMSVirtual": {
+            "description": "Get verification SMS messages or calls for any online service without exposing your personal phone number and protect your privacy.",
+            "info": "Description and videos"
+        },
+        "Mecenate": {
+            "description": "'Mecenate' is a community of people of art. The platform for the authors who create, and patrons who give talents the opportunity to open.",
+            "info": "Description, screenshots and videos"
+        },
+        "Wiggle": {
+            "description": "Wiggle is your ultimate companion for navigating the vibrant world of nightclubs, pubs and people.",
+            "info": "Description and video"
+        },
+        "Riturnit": {
+            "description": "Riturnit is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes.",
+            "info": "Description and videos"
+        },
+        "CartScootWeb": {
+            "description": "Navigate Life, Share the Ride: Your Journey, Your Community.",
+            "info": "Description and screenshots"
+        },
+        "CleaningCompany": {
+            "description": "Your trusted cleaning company partner.",
+            "info": "Description and screenshot"
+        },
+        "Lumm": {
+            "description": "Lumm is the Web3 application on which you can store NFT, trade on marketplace and connect cryptowallets.",
+            "info": "Description and video"
+        },
+        "Viround_m": {
+            "description": "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+            "info": "Description and screenshots"
+        },
+        "Viround_w": {
+            "description": "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
+            "info": "Description and screenshot"
+        }
+    },
+    "Tools": {
+        "tools": "Tools",
+        "inWorkIUse": "In the work I use",
+        "whichI": "on which I use the following tools in development:",
+        "or": "or",
+        "ide": "for code edit",
+        "xcode_build": "for iOS Builds",
+        "as_builds": "for Android Builds",
+        "figma_for": " for design",
+        "description": "Usually I'm used next packages",
+        "for_web": "For Web",
+        "for_mobile": "For Mobile"
+    },
+    "Contacts": {
+        "contacts": "Contacts",
+        "download_cv": "Download CV"
     }
 }
