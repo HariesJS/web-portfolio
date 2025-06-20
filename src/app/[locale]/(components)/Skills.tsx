@@ -44,7 +44,7 @@ export const Skills = ({
                                 key={i}
                                 alt=""
                                 className="w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] xl:w-[100px] xl:h-[100px] 2xl:w-[100px] 2xl:h-[100px] object-cover rounded"
-                                src={item.image}
+                                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${item.image}`}
                                 style={{borderRadius: 0}}
                                 isBlurred
                                 draggable={false}

@@ -129,7 +129,7 @@ export const Projects = ({
                             removeWrapper
                             alt=""
                             className="z-0 w-full h-full object-cover"
-                            src={e.image}
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${e.image}`}
                             draggable={false}
                         />
                         <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">

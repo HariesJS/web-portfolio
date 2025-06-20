@@ -20,7 +20,7 @@ export const Media = ({item}: {item: any}) => {
                 style={{width: "100%", maxHeight: 300}}
             >
                 <video
-                    src={item.path}
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${item.path}`}
                     controls
                     autoPlay={true}
                     muted={true}
@@ -42,7 +42,7 @@ export const Media = ({item}: {item: any}) => {
                 style={{width: "100%", maxHeight: 300}}
             >
                 <Image
-                    src={item.path}
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${item.path}`}
                     isBlurred={true}
                     style={{
                         width: "100%",
