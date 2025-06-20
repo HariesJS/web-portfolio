@@ -16,6 +16,7 @@ let nextConfig = {
     },
     experimental: {
         missingSuspenseWithCSRBailout: false,
+        forceSwcTransforms: true,
     },
 }
 
