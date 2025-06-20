@@ -14,9 +14,6 @@ let nextConfig = {
     images: {
         unoptimized: true,
     },
-    experimental: {
-        missingSuspenseWithCSRBailout: false,
-    },
 }
 
 if (!isExport) {

@@ -9,12 +9,6 @@ import {
 } from "@heroui/navbar"
 import {Link} from "@heroui/link"
 import {link as linkStyles} from "@heroui/theme"
-import {
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    DropdownTrigger,
-} from "@heroui/dropdown"
 import NextLink from "next/link"
 import clsx from "clsx"
 
@@ -26,26 +20,11 @@ import {
     MailIcon,
     TelegramIcon,
 } from "@/components/Header/icons"
-import {useLocale, useTranslations} from "next-intl"
-import {usePathname, useRouter} from "next/navigation"
-import {Theme} from "@/styles/theme"
+import {useTranslations} from "next-intl"
+import PublicNavigationLocaleSwitcher from "../PublicNavigationLocaleSwitcher"
 
 export const Header = ({buttonsData}: {buttonsData: any[]}) => {
     const t = useTranslations("Header")
-
-    const router = useRouter()
-    const pathname = usePathname()
-    const locale = useLocale()
-
-    const changeLanguage = (newLocale: string) => {
-        const segments = pathname.split("/")
-        segments[1] = newLocale
-        const newPath = segments.join("/")
-        router.push(newPath)
-        setTimeout(() => {
-            window.location.reload()
-        }, 350)
-    }
 
     return (
         <HeroUINavbar
@@ -124,30 +103,7 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                     </Link>
                 </NavbarItem>
             </NavbarContent>
-            <Dropdown>
-                <DropdownTrigger>
-                    <span
-                        style={{
-                            textTransform: "uppercase",
-                            cursor: "pointer",
-                            color: Theme.mainColors.yellow,
-                        }}
-                    >
-                        {locale}
-                    </span>
-                </DropdownTrigger>
-                <DropdownMenu aria-label="Static Actions">
-                    <DropdownItem key="en" onPress={() => changeLanguage("en")}>
-                        EN
-                    </DropdownItem>
-                    <DropdownItem key="ru" onPress={() => changeLanguage("ru")}>
-                        RU
-                    </DropdownItem>
-                    <DropdownItem key="ua" onPress={() => changeLanguage("ua")}>
-                        UA
-                    </DropdownItem>
-                </DropdownMenu>
-            </Dropdown>
+            <PublicNavigationLocaleSwitcher />
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <NavbarMenuToggle />
             </NavbarContent>

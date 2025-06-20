@@ -10,6 +10,8 @@ import {Background} from "@/components/Background"
 import {NextIntlClientProvider, hasLocale} from "next-intl"
 import {notFound} from "next/navigation"
 import {routing} from "@/i18n/routing"
+import {setRequestLocale} from "next-intl/server"
+import {locales} from "@/config"
 
 export const metadata: Metadata = {
     title: {
@@ -20,6 +22,10 @@ export const metadata: Metadata = {
     icons: {
         icon: "/favicon.ico",
     },
+}
+
+export function generateStaticParams() {
+    return locales.map((locale) => ({locale}))
 }
 
 export const viewport: Viewport = {
@@ -40,6 +46,9 @@ export default async function RootLayout({
     if (!hasLocale(routing.locales, locale)) {
         notFound()
     }
+
+    // Enable static rendering
+    setRequestLocale(locale)
 
     return (
         <html suppressHydrationWarning lang={locale}>
