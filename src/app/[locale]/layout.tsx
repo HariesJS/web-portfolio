@@ -29,6 +29,10 @@ export const viewport: Viewport = {
     ],
 }
 
+export async function generateStaticParams() {
+    return [{locale: "en"}, {locale: "ru"}, {locale: "ua"}]
+}
+
 export default async function RootLayout({
     children,
     params,
