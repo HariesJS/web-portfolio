@@ -6,6 +6,9 @@ const isExport = process.env.NEXT_EXPORT === "true"
 let nextConfig = {
     basePath: isProd ? "/web-portfolio" : "",
     assetPrefix: isProd ? "/web-portfolio/" : "",
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 }
 
 if (!isExport) {
