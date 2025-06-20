@@ -6,4 +6,7 @@ export const routing = defineRouting({
 
     // Used when no locale matches
     defaultLocale: "en",
+    // Отключаем автоопределение локали через headers/cookies
+    localeDetection: false,
+    // Явно указываем стратегию для статики
 })
