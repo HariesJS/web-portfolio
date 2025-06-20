@@ -828,6 +828,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroui/tabs@npm:^2.2.18":
+  version: 2.2.18
+  resolution: "@heroui/tabs@npm:2.2.18"
+  dependencies:
+    "@heroui/aria-utils": 2.2.18
+    "@heroui/react-utils": 2.1.11
+    "@heroui/shared-utils": 2.1.9
+    "@heroui/use-is-mounted": 2.1.7
+    "@react-aria/focus": 3.20.4
+    "@react-aria/interactions": 3.25.2
+    "@react-aria/tabs": 3.10.4
+    "@react-aria/utils": 3.29.1
+    "@react-stately/tabs": 3.8.3
+    "@react-types/shared": 3.30.0
+    scroll-into-view-if-needed: 3.0.10
+  peerDependencies:
+    "@heroui/system": ">=2.4.7"
+    "@heroui/theme": ">=2.4.6"
+    framer-motion: ">=11.5.6 || >=12.0.0-alpha.1"
+    react: ">=18 || >=19.0.0-rc.0"
+    react-dom: ">=18 || >=19.0.0-rc.0"
+  checksum: 67f64d8f379092edcba378bd7c7b5267da88eae4c6c231c3629e04cb972bcca65fc1e346733a0c7bad5184349704728929d8b24d5b6758d56305a73ab54d76b5
+  languageName: node
+  linkType: hard
+
 "@heroui/theme@npm:2.4.17":
   version: 2.4.17
   resolution: "@heroui/theme@npm:2.4.17"
@@ -1856,6 +1881,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-aria/tabs@npm:3.10.4":
+  version: 3.10.4
+  resolution: "@react-aria/tabs@npm:3.10.4"
+  dependencies:
+    "@react-aria/focus": ^3.20.4
+    "@react-aria/i18n": ^3.12.10
+    "@react-aria/selection": ^3.24.2
+    "@react-aria/utils": ^3.29.1
+    "@react-stately/tabs": ^3.8.3
+    "@react-types/shared": ^3.30.0
+    "@react-types/tabs": ^3.3.16
+    "@swc/helpers": ^0.5.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+    react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+  checksum: 1cd01190ac02958ecc1a9b47726dc82840d64330d785a40ec1ed8287a8b97c793b6a15f19110f826b9e7dee81a9c432865959a435b47474f07079ef62b09547b
+  languageName: node
+  linkType: hard
+
 "@react-aria/textfield@npm:3.17.4":
   version: 3.17.4
   resolution: "@react-aria/textfield@npm:3.17.4"
@@ -2077,6 +2121,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-stately/tabs@npm:3.8.3, @react-stately/tabs@npm:^3.8.3":
+  version: 3.8.3
+  resolution: "@react-stately/tabs@npm:3.8.3"
+  dependencies:
+    "@react-stately/list": ^3.12.3
+    "@react-types/shared": ^3.30.0
+    "@react-types/tabs": ^3.3.16
+    "@swc/helpers": ^0.5.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+  checksum: 58f5355a74f50c1504e13bdcba2d4af2047627d1ba3e9853e3e6ada270eb3d296b7bbd937657c2c12e0330d0d68846dbd805af1666ad3d4f1c32385526578187
+  languageName: node
+  linkType: hard
+
 "@react-stately/toggle@npm:3.8.5, @react-stately/toggle@npm:^3.8.5":
   version: 3.8.5
   resolution: "@react-stately/toggle@npm:3.8.5"
@@ -2271,6 +2329,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
   checksum: 6901afb62cff6303e31f2e09840c70ae206a0099ede0ea8354dfa2ba4db9d097fcbab9a7c991751ebf5602f4f10426cf0df8460d9826c94f8fa66affca50a5ee
+  languageName: node
+  linkType: hard
+
+"@react-types/tabs@npm:^3.3.16":
+  version: 3.3.16
+  resolution: "@react-types/tabs@npm:3.3.16"
+  dependencies:
+    "@react-types/shared": ^3.30.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
+  checksum: 4af698b58dfc94982369c5345565d70d925b2ae0e5f07385dbedf04a7638fb461cc8fff9e9a005f380724c5d56260561b1f3597f899013738ed37543dab80db6
   languageName: node
   linkType: hard
 
@@ -3796,6 +3865,13 @@ __metadata:
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
   checksum: d7b9913ff92cae20cb577a4ac6fcc121bd6223319e54a40f51a14740a681ad5c574fd29a57da478a5f234a6fa6c52cbf0b7c641353e03c648b1ae85ba670b977
+  languageName: node
+  linkType: hard
+
+"compute-scroll-into-view@npm:^3.0.2":
+  version: 3.1.1
+  resolution: "compute-scroll-into-view@npm:3.1.1"
+  checksum: c56345199e746f93a515b3190d1bf0940944d5b7e1b06e33f16b430a93c9ada1c6b9fe89674d3f3a6078642523c49edcddc1cd639bbe78797fffd072b0231930
   languageName: node
   linkType: hard
 
@@ -5801,6 +5877,7 @@ __metadata:
     "@heroui/snippet": 2.2.22
     "@heroui/switch": 2.2.19
     "@heroui/system": 2.4.17
+    "@heroui/tabs": ^2.2.18
     "@heroui/theme": 2.4.17
     "@heroui/tooltip": ^2.2.18
     "@heroui/use-disclosure": ^2.2.13
@@ -6597,6 +6674,15 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: 3e82d1f419e240ef6219d794ff29c7ee415fbdc19e038f680a10c067108e06284f1847450a210b29bbaf97b9d8a97ced5f624c31c681248ac84c80d56ad5a2c4
+  languageName: node
+  linkType: hard
+
+"scroll-into-view-if-needed@npm:3.0.10":
+  version: 3.0.10
+  resolution: "scroll-into-view-if-needed@npm:3.0.10"
+  dependencies:
+    compute-scroll-into-view: ^3.0.2
+  checksum: eab326e527620883040e1937329bce28396ac67199098202fc785853b1576646ff1c987594f5630f78bfd84fda8486a793845c0f5c0b1ad70638c6d015578ebb
   languageName: node
   linkType: hard
 

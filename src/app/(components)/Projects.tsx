@@ -1,5 +1,5 @@
 import {Button} from "@heroui/button"
-import {Card, CardHeader, CardFooter} from "@heroui/card"
+import {Card, CardHeader, CardFooter, CardBody} from "@heroui/card"
 import {Image} from "@heroui/image"
 import {gsap} from "gsap"
 import {useDisclosure} from "@heroui/use-disclosure"
@@ -10,12 +10,13 @@ import {
     ModalFooter,
     ModalHeader,
 } from "@heroui/modal"
+import {Tab, Tabs} from "@heroui/tabs"
 import {Link} from "@heroui/link"
 import {Theme} from "@/styles/theme"
 import {siteConfig} from "@/config/site"
 import {projectsData} from "../const"
 import {ScrollTrigger} from "gsap/all"
-import {useState} from "react"
+import {useEffect, useRef, useState} from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -60,8 +61,6 @@ export const Projects = ({
                         backgroundColor: "rgba(255, 255, 255, 0.1)", // полупрозрачный фон
                         padding: "20px",
                         borderRadius: "12px",
-                        marginLeft: "15%",
-                        marginRight: "15%",
                     }}
                 >
                     <p
@@ -157,11 +156,87 @@ export const Projects = ({
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">
-                                {activeItem.title}
+                            <ModalHeader
+                                className="flex flex-col gap-1"
+                                style={{
+                                    alignItems: "center",
+                                }}
+                            >
+                                <p
+                                    style={{
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    {activeItem.title}
+                                </p>
                             </ModalHeader>
-                            <ModalBody>
-                                <p>{activeItem.description}</p>
+                            <ModalBody
+                                style={{
+                                    alignItems: "center",
+                                }}
+                            >
+                                <p
+                                    style={{
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    {activeItem.description}
+                                </p>
+                                <Tabs
+                                    aria-label="Dynamic tabs"
+                                    items={activeItem?.media}
+                                    style={{
+                                        alignItems: "center",
+                                        display: "flex",
+                                        flex: 1,
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    {(item: any) => (
+                                        <Tab key={item.id} title={item.id}>
+                                            <Card>
+                                                <CardBody
+                                                    style={{
+                                                        overflow: "hidden",
+                                                    }}
+                                                >
+                                                    {item.path.includes(
+                                                        "mp4"
+                                                    ) ? (
+                                                        <video
+                                                            src={item.path}
+                                                            controls
+                                                            autoPlay={true}
+                                                            muted={true}
+                                                            style={{
+                                                                width: "100%",
+                                                                height: 300,
+                                                                borderRadius:
+                                                                    "12px",
+                                                            }}
+                                                        />
+                                                    ) : (
+                                                        <Image
+                                                            src={item.path}
+                                                            isBlurred={true}
+                                                            style={{
+                                                                width: "100%",
+                                                                height: 300,
+                                                                borderRadius:
+                                                                    "12px",
+                                                                aspectRatio:
+                                                                    "16 / 9",
+                                                                // height: "auto",
+                                                                objectFit:
+                                                                    "contain",
+                                                            }}
+                                                        />
+                                                    )}
+                                                </CardBody>
+                                            </Card>
+                                        </Tab>
+                                    )}
+                                </Tabs>
                             </ModalBody>
                             <ModalFooter></ModalFooter>
                         </>
