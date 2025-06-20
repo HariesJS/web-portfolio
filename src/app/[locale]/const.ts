@@ -91,7 +91,7 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/tippy4.mp4",
+                path: "/example/video/tippy4.MP4",
             },
             {
                 id: "2",
@@ -103,19 +103,19 @@ export const projectsData = [
             },
             {
                 id: "4",
-                path: "/example/video/tippy5.mp4",
+                path: "/example/video/tippy5.MP4",
             },
             {
                 id: "5",
-                path: "/example/video/tippy6.mp4",
+                path: "/example/video/tippy6.MP4",
             },
             {
                 id: "6",
-                path: "/example/video/tippy7.mp4",
+                path: "/example/video/tippy7.MP4",
             },
             {
                 id: "7",
-                path: "/example/video/tippy9.mp4",
+                path: "/example/video/tippy9.MP4",
             },
             {
                 id: "8",
@@ -123,7 +123,7 @@ export const projectsData = [
             },
             {
                 id: "9",
-                path: "/example/video/tippy.mp4",
+                path: "/example/video/tippy.MP4",
             },
         ],
     },
@@ -136,19 +136,19 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/sms.mp4",
+                path: "/example/video/sms.MP4",
             },
             {
                 id: "2",
-                path: "/example/video/sms2.mp4",
+                path: "/example/video/sms2.MP4",
             },
             {
                 id: "3",
-                path: "/example/video/sms3.mp4",
+                path: "/example/video/sms3.MP4",
             },
             {
                 id: "4",
-                path: "/example/video/sms4.mp4",
+                path: "/example/video/sms4.MP4",
             },
         ],
     },
@@ -199,11 +199,11 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/riturnit1.mp4",
+                path: "/example/video/riturnit1.MP4",
             },
             {
                 id: "2",
-                path: "/example/video/riturnit2.mp4",
+                path: "/example/video/riturnit2.MP4",
             },
         ],
     },
@@ -258,7 +258,7 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/lumm.mp4",
+                path: "/example/video/lumm.MP4",
             },
         ],
     },
@@ -271,39 +271,39 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/images/viround9360.png",
+                path: "/example/images/viround9360.PNG",
             },
             {
                 id: "2",
-                path: "/example/images/viround9361.png",
+                path: "/example/images/viround9361.PNG",
             },
             {
                 id: "3",
-                path: "/example/images/viround9362.png",
+                path: "/example/images/viround9362.PNG",
             },
             {
                 id: "4",
-                path: "/example/images/viround9363.png",
+                path: "/example/images/viround9363.PNG",
             },
             {
                 id: "5",
-                path: "/example/images/viround9370.png",
+                path: "/example/images/viround9370.PNG",
             },
             {
                 id: "6",
-                path: "/example/images/viround9365.png",
+                path: "/example/images/viround9365.PNG",
             },
             {
                 id: "7",
-                path: "/example/images/viround9366.png",
+                path: "/example/images/viround9366.PNG",
             },
             {
                 id: "8",
-                path: "/example/images/viround9368.png",
+                path: "/example/images/viround9368.PNG",
             },
             {
                 id: "9",
-                path: "/example/images/viround9369.png",
+                path: "/example/images/viround9369.PNG",
             },
         ],
     },
