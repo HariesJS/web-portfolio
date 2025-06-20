@@ -1,11 +1,37 @@
+// import createMiddleware from "next-intl/middleware"
+// import {routing} from "./i18n/routing"
+
+// export default createMiddleware(routing)
+
+// export const config = {
+//     // Match all pathnames except for
+//     // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+//     // - … the ones containing a dot (e.g. `favicon.ico`)
+//     matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+// }
+
 import createMiddleware from "next-intl/middleware"
 import {routing} from "./i18n/routing"
 
-export default createMiddleware(routing)
+export default createMiddleware({
+    // Используем ваш кастомный routing
+    ...routing,
+
+    // Отключаем автоматическое определение локали (т.к. нет сервера)
+    localePrefix: "always",
+
+    // Явно указываем поддерживаемые локали
+    locales: routing.locales,
+    defaultLocale: routing.defaultLocale,
+})
 
 export const config = {
-    // Match all pathnames except for
-    // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
-    // - … the ones containing a dot (e.g. `favicon.ico`)
-    matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+    matcher: [
+        // Базовые пути
+        "/",
+        "/(ru|en)/:path*",
+
+        // Исключения (как у вас)
+        "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+    ],
 }

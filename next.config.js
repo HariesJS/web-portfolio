@@ -9,10 +9,13 @@ let nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
-    output: "export",
+    // output: "export",
     trailingSlash: true,
     images: {
         unoptimized: true,
+    },
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
     },
 }
 
