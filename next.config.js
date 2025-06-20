@@ -9,6 +9,7 @@ let nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    export: "output",
 }
 
 if (!isExport) {

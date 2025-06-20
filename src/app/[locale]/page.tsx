@@ -10,6 +10,6 @@ export async function generateStaticParams() {
     return [{locale: "en"}, {locale: "ru"}, {locale: "ua"}]
 }
 
-export default function Home({params}: {params: {locale: string}}) {
+export default function Home() {
     return <HomePage />
 }
