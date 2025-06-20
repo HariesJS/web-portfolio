@@ -10,6 +10,20 @@ let nextConfig = {
         ignoreDuringBuilds: true,
     },
     output: "export",
+    async redirects() {
+        return [
+            {
+                source: "/",
+                destination: "/en",
+                permanent: true,
+            },
+            {
+                source: "/:path((?!en|ru|ua).*)",
+                destination: "/en/:path*",
+                permanent: true,
+            },
+        ]
+    },
     trailingSlash: true,
     images: {
         unoptimized: true,
