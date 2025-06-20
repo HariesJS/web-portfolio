@@ -9,7 +9,7 @@ let nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
-    export: "output",
+    output: "export",
     images: {
         unoptimized: true,
     },
