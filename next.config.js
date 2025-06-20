@@ -1,13 +1,16 @@
 const createNextIntlPlugin = require("next-intl/plugin")
 
-const withNextIntl = createNextIntlPlugin()
-
 const isProd = process.env.NODE_ENV === "production"
+const isExport = process.env.NEXT_EXPORT === "true"
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
     basePath: isProd ? "/web-portfolio" : "",
     assetPrefix: isProd ? "/web-portfolio/" : "",
 }
 
-module.exports = withNextIntl(nextConfig)
+if (!isExport) {
+    const withNextIntl = createNextIntlPlugin()
+    nextConfig = withNextIntl(nextConfig)
+}
+
+module.exports = nextConfig
