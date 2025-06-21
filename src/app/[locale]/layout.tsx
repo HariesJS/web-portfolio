@@ -1,11 +1,9 @@
 import "@/styles/globals.css"
 import {Metadata, Viewport} from "next"
-import clsx from "clsx"
 
 import {Providers} from "./providers"
 
 import {siteConfig} from "@/config/site"
-import {fontSans} from "@/config/fonts"
 import {Background} from "@/components/Background"
 import {NextIntlClientProvider, hasLocale} from "next-intl"
 import {notFound} from "next/navigation"
@@ -51,27 +49,15 @@ export default async function RootLayout({
     setRequestLocale(locale)
 
     return (
-        <html suppressHydrationWarning lang={locale}>
-            <head />
-            <body
-                className={clsx(
-                    "min-h-screen text-foreground bg-background font-sans antialiased",
-                    fontSans.variable
-                )}
-            >
-                <NextIntlClientProvider>
-                    <Providers
-                        themeProps={{attribute: "class", defaultTheme: "dark"}}
-                    >
-                        <div className="relative flex flex-col h-screen">
-                            <Background />
-                            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-                                {children}
-                            </main>
-                        </div>
-                    </Providers>
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <NextIntlClientProvider>
+            <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
+                <div className="relative flex flex-col h-screen">
+                    <Background />
+                    <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                        {children}
+                    </main>
+                </div>
+            </Providers>
+        </NextIntlClientProvider>
     )
 }
