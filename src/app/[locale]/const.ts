@@ -272,39 +272,39 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/images/viround9360.PNG",
+                path: "/example/images/viround9360.png",
             },
             {
                 id: "2",
-                path: "/example/images/viround9361.PNG",
+                path: "/example/images/viround9361.png",
             },
             {
                 id: "3",
-                path: "/example/images/viround9362.PNG",
+                path: "/example/images/viround9362.png",
             },
             {
                 id: "4",
-                path: "/example/images/viround9363.PNG",
+                path: "/example/images/viround9363.png",
             },
             {
                 id: "5",
-                path: "/example/images/viround9370.PNG",
+                path: "/example/images/viround9370.png",
             },
             {
                 id: "6",
-                path: "/example/images/viround9365.PNG",
+                path: "/example/images/viround9365.png",
             },
             {
                 id: "7",
-                path: "/example/images/viround9366.PNG",
+                path: "/example/images/viround9366.png",
             },
             {
                 id: "8",
-                path: "/example/images/viround9368.PNG",
+                path: "/example/images/viround9368.png",
             },
             {
                 id: "9",
-                path: "/example/images/viround9369.PNG",
+                path: "/example/images/viround9369.png",
             },
         ],
     },
@@ -312,7 +312,7 @@ export const projectsData = [
         id: "10",
         title: "Viround (web)",
         description: "Viround_w.description",
-        image: "/images/viroundweb.png",
+        image: "/example/images/viroundweb1.png",
         aboutContent: "Viround_w.info",
         media: [
             {
