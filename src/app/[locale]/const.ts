@@ -91,47 +91,38 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/tippy4.MP4",
                 pathUrl: "https://youtube.com/embed/d1J-JhXpbuY",
             },
             {
                 id: "2",
-                path: "/example/video/tippy1.mp4",
                 pathUrl: "https://youtube.com/embed/0eZAQnhCf8Q",
             },
             {
                 id: "3",
-                path: "/example/video/tippy3.mp4",
                 pathUrl: "https://youtube.com/embed/S6hhPMkuXzk",
             },
             {
                 id: "4",
-                path: "/example/video/tippy5.MP4",
                 pathUrl: "https://youtube.com/embed/2ggoUWA7KxY",
             },
             {
                 id: "5",
-                path: "/example/video/tippy6.MP4",
                 pathUrl: "https://youtube.com/embed/RnQcOHwcJ5k",
             },
             {
                 id: "6",
-                path: "/example/video/tippy7.MP4",
                 pathUrl: "https://youtube.com/embed/kCpL3jYtp-k",
             },
             {
                 id: "7",
-                path: "/example/video/tippy9.MP4",
                 pathUrl: "https://youtube.com/embed/usHQkqwHvRg",
             },
             {
                 id: "8",
-                path: "/example/video/tippy11.mp4",
                 pathUrl: "https://youtube.com/embed/kmyhfvC2eJc",
             },
             {
                 id: "9",
-                path: "/example/video/tippy.MP4",
                 pathUrl: "https://youtube.com/embed/FPWtG77eIcw",
             },
         ],
@@ -145,22 +136,18 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/sms.MP4",
                 pathUrl: "https://youtube.com/embed/9X4gY4hAnlc",
             },
             {
                 id: "2",
-                path: "/example/video/sms2.MP4",
                 pathUrl: "https://youtube.com/embed/atXYZZFQefE",
             },
             {
                 id: "3",
-                path: "/example/video/sms3.MP4",
                 pathUrl: "https://youtube.com/embed/aytxG2Rt-10",
             },
             {
                 id: "4",
-                path: "/example/video/sms4.MP4",
                 pathUrl: "https://youtube.com/embed/9X4gY4hAnlc",
             },
         ],
@@ -182,12 +169,10 @@ export const projectsData = [
             },
             {
                 id: "3",
-                path: "/example/video/mecenate1.mp4",
                 pathUrl: "https://youtube.com/embed/QyyGKVJBu3c",
             },
             {
                 id: "4",
-                path: "/example/video/mecenate3.mp4",
                 pathUrl: "https://youtube.com/embed/5LRL8ye4kqY",
             },
         ],
@@ -201,7 +186,6 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/wiggle.mp4",
                 pathUrl:
                     "https://www.youtube.com/embed/a4eaA7srE5U?si=FbQhxCBTEy-RPUQC",
             },
@@ -216,12 +200,10 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/riturnit1.MP4",
                 pathUrl: "https://youtube.com/embed/iLbe1OifWBE",
             },
             {
                 id: "2",
-                path: "/example/video/riturnit2.MP4",
                 pathUrl: "https://youtube.com/embed/uJ1XnNB3kgw",
             },
         ],
@@ -277,7 +259,6 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/video/lumm.MP4",
                 pathUrl: "https://youtube.com/embed/PPxn2JlyJEs",
             },
         ],
@@ -311,7 +292,7 @@ export const projectsData = [
             },
             {
                 id: "6",
-                path: "/example/images/viround9365.PNG", // не работает
+                path: "/example/images/viround9365.PNG",
             },
             {
                 id: "7",
