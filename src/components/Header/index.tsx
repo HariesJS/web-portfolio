@@ -22,15 +22,19 @@ import {
 } from "@/components/Header/icons"
 import {useLocale, useTranslations} from "next-intl"
 import PublicNavigationLocaleSwitcher from "../PublicNavigationLocaleSwitcher"
+import {useState} from "react"
 
 export const Header = ({buttonsData}: {buttonsData: any[]}) => {
     const t = useTranslations("Header")
     const locale = useLocale()
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
         <HeroUINavbar
             maxWidth="xl"
             position="sticky"
+            isMenuOpen={isMenuOpen}
+            onMenuOpenChange={setIsMenuOpen}
             shouldHideOnScroll={false}
             className="backdrop-blur-sm bg-black/50"
             style={{
@@ -106,7 +110,9 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
             </NavbarContent>
             <PublicNavigationLocaleSwitcher />
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
-                <NavbarMenuToggle />
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                />
             </NavbarContent>
 
             <NavbarMenu>
@@ -116,7 +122,10 @@ export const Header = ({buttonsData}: {buttonsData: any[]}) => {
                             <Link
                                 color={"foreground"}
                                 size="lg"
-                                onClick={buttonsData[index]}
+                                onClick={() => {
+                                    setIsMenuOpen(false)
+                                    buttonsData[index]()
+                                }}
                             >
                                 {t(item.label)}
                             </Link>
