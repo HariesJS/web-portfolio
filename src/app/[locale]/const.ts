@@ -272,23 +272,23 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                path: "/example/images/viround9360.png",
+                path: "/example/images/viround1.png",
             },
             {
                 id: "2",
-                path: "/example/images/viround9361.png",
+                path: "/example/images/viround2.png",
             },
             {
                 id: "3",
-                path: "/example/images/viround9362.png",
+                path: "/example/images/viround3.png",
             },
             {
                 id: "4",
-                path: "/example/images/viround9363.png",
+                path: "/example/images/viround4.png",
             },
             {
                 id: "5",
-                path: "/example/images/viround9370.png",
+                path: "/example/images/viround5.png",
             },
             {
                 id: "6",
@@ -296,15 +296,15 @@ export const projectsData = [
             },
             {
                 id: "7",
-                path: "/example/images/viround9366.png",
+                path: "/example/images/viround6.png",
             },
             {
                 id: "8",
-                path: "/example/images/viround9368.png",
+                path: "/example/images/viround8.png",
             },
             {
                 id: "9",
-                path: "/example/images/viround9369.png",
+                path: "/example/images/viround9.png",
             },
         ],
     },
