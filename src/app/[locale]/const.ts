@@ -107,19 +107,19 @@ export const projectsData = [
             },
             {
                 id: "5",
-                pathUrl: "https://youtube.com/embed/RnQcOHwcJ5k",
+                pathUrl: "https://youtube.com/embed/vULNxaMDAWM",
             },
             {
                 id: "6",
-                pathUrl: "https://youtube.com/embed/kCpL3jYtp-k",
+                pathUrl: "https://youtube.com/embed/UdvFbBIOZNE",
             },
             {
                 id: "7",
-                pathUrl: "https://youtube.com/embed/usHQkqwHvRg",
+                pathUrl: "https://youtube.com/embed/N_-WARSlo_c",
             },
             {
                 id: "8",
-                pathUrl: "https://youtube.com/embed/kmyhfvC2eJc",
+                pathUrl: "https://youtube.com/embed/ekHZX3Wpf30",
             },
             {
                 id: "9",
@@ -169,11 +169,11 @@ export const projectsData = [
             },
             {
                 id: "3",
-                pathUrl: "https://youtube.com/embed/QyyGKVJBu3c",
+                pathUrl: "https://youtube.com/embed/L0Jm-KXGBEw",
             },
             {
                 id: "4",
-                pathUrl: "https://youtube.com/embed/5LRL8ye4kqY",
+                pathUrl: "https://youtube.com/embed/EyFtmQTR6OI",
             },
         ],
     },
@@ -187,7 +187,7 @@ export const projectsData = [
             {
                 id: "1",
                 pathUrl:
-                    "https://www.youtube.com/embed/a4eaA7srE5U?si=FbQhxCBTEy-RPUQC",
+                    "https://www.youtube.com/embed/jIVYjJZHC5M?si=8GtQx8yALzM5mcTv",
             },
         ],
     },
@@ -200,7 +200,7 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                pathUrl: "https://youtube.com/embed/iLbe1OifWBE",
+                pathUrl: "https://youtube.com/embed/iUNEQHNU09E",
             },
             {
                 id: "2",
@@ -259,7 +259,7 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                pathUrl: "https://youtube.com/embed/PPxn2JlyJEs",
+                pathUrl: "https://youtube.com/embed/B7C8bfjAgR8",
             },
         ],
     },
