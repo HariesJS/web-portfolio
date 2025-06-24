@@ -190,7 +190,10 @@ export const Projects = ({
                                     items={activeItem?.media}
                                     style={{
                                         alignItems: "center",
-                                        display: "flex",
+                                        display:
+                                            activeItem?.media?.length === 1
+                                                ? "none"
+                                                : "flex",
                                         flex: 1,
                                         justifyContent: "center",
                                     }}

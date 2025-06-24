@@ -136,19 +136,23 @@ export const projectsData = [
         media: [
             {
                 id: "1",
-                pathUrl: "https://youtube.com/embed/9X4gY4hAnlc",
+                pathUrl: "https://youtube.com/embed/xfhuj6qPxFs",
             },
             {
                 id: "2",
+                pathUrl: "https://youtube.com/embed/9X4gY4hAnlc",
+            },
+            {
+                id: "3",
 
                 pathUrl: "https://youtube.com/embed/aytxG2Rt-10",
             },
             {
-                id: "3",
+                id: "4",
                 pathUrl: "https://youtube.com/embed/atXYZZFQefE",
             },
             {
-                id: "4",
+                id: "5",
                 pathUrl: "https://youtube.com/embed/9deLHHZL7Mk",
             },
         ],
