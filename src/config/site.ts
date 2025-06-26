@@ -53,5 +53,7 @@ export const siteConfig = {
         telegram: "https://t.me/evg_9",
         mail: "mailto:lofmty@gmail.com",
         cv: "https://drive.google.com/file/d/1Ztt6FnJIfCC3z1halzsDF1XcDWLevlQR/view?pli=1",
+        cvDownload:
+            "https://drive.usercontent.google.com/u/0/uc?id=1Ztt6FnJIfCC3z1halzsDF1XcDWLevlQR&export=download",
     },
 }

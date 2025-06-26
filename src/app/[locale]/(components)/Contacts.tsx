@@ -7,6 +7,7 @@ import {
 } from "@/components/Header/icons"
 import {siteConfig} from "@/config/site"
 import {Theme} from "@/styles/theme"
+import {Image} from "@heroui/image"
 import {Link} from "@heroui/link"
 import {useTranslations} from "next-intl"
 
@@ -127,7 +128,31 @@ export const Contacts = ({
                     </Link>
                 </div>
             </div>
-            <Button onPress={() => window.open(siteConfig.links.cv, "_blank")}>
+            <Link
+                href={siteConfig.links.cv}
+                target="_blank"
+                className="transition-transform duration-300 hover:scale-90 rounded-lg text-center"
+                style={{
+                    cursor: "pointer",
+                }}
+            >
+                <Image
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${"/images/resume.png"}`}
+                    isBlurred={true}
+                    draggable={false}
+                    style={{
+                        width: 200,
+                        height: 300,
+                        aspectRatio: "16 / 9",
+                        marginBottom: 40,
+                    }}
+                />
+            </Link>
+            <Button
+                onPress={() =>
+                    window.open(siteConfig.links.cvDownload, "_blank")
+                }
+            >
                 {t("download_cv")}
             </Button>
             <div
