@@ -57,17 +57,17 @@ export default function HomePage() {
                     {opacity: 1},
                     {opacity: 1, visibility: "visible"}
                 )
-                .from(skillsRefs.current, {
-                    scrollTrigger: {
-                        trigger: skillsContainerRef.current,
-                        start: "top 80%",
+                .from(
+                    skillsRefs.current,
+                    {
+                        opacity: 0,
+                        y: 50,
+                        stagger: 0.2,
+                        duration: 0.6,
+                        ease: "power3.out",
                     },
-                    opacity: 0,
-                    y: 50,
-                    stagger: 0.2,
-                    duration: 0.6,
-                    ease: "power3.out",
-                })
+                    "<"
+                )
                 .fromTo(
                     ".skills-title",
                     {opacity: 0},
