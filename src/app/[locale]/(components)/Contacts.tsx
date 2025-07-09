@@ -1,10 +1,4 @@
 import {Button} from "@/components/Button"
-import {
-    GithubIcon,
-    LinkedInIcon,
-    MailIcon,
-    TelegramIcon,
-} from "@/components/Header/icons"
 import {siteConfig} from "@/config/site"
 import {Theme} from "@/styles/theme"
 import {Image} from "@heroui/image"
@@ -38,10 +32,9 @@ export const Contacts = ({
                 {t("contacts")}
             </p>
             <div
+                className="backdrop-blur bg-white/10"
                 style={{
                     textAlign: "center",
-                    backdropFilter: "blur(10px)",
-                    backgroundColor: "rgba(255, 255, 255, 0.1)", // полупрозрачный фон
                     padding: "20px",
                     borderRadius: "12px",
                     marginBottom: 40,
@@ -155,54 +148,6 @@ export const Contacts = ({
             >
                 {t("download_cv")}
             </Button>
-            <div
-                className="backdrop-blur-sm bg-black/50"
-                style={{
-                    width: "100%",
-                    padding: "20px",
-                    borderRadius: "20px",
-                    marginTop: 40,
-                }}
-            >
-                <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: 10,
-                    }}
-                >
-                    <Link
-                        isExternal
-                        aria-label="Github"
-                        href={siteConfig.links.github}
-                    >
-                        <GithubIcon className="text-default-500" />
-                    </Link>
-                    <Link
-                        isExternal
-                        aria-label="LinkedIn"
-                        href={siteConfig.links.linkedIn}
-                    >
-                        <LinkedInIcon />
-                    </Link>
-                    <Link
-                        isExternal
-                        aria-label="Telegram"
-                        href={siteConfig.links.telegram}
-                    >
-                        <TelegramIcon />
-                    </Link>
-                    <Link
-                        isExternal
-                        aria-label="Mail"
-                        href={siteConfig.links.mail}
-                    >
-                        <MailIcon />
-                    </Link>
-                </div>
-            </div>
         </section>
     )
 }

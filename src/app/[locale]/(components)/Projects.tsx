@@ -59,10 +59,9 @@ export const Projects = ({
                     {t("projects")}
                 </p>
                 <div
+                    className="backdrop-blur bg-white/10"
                     style={{
                         textAlign: "center",
-                        backdropFilter: "blur(10px)",
-                        backgroundColor: "rgba(255, 255, 255, 0.1)", // полупрозрачный фон
                         padding: "20px",
                         borderRadius: "12px",
                     }}

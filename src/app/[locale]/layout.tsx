@@ -53,9 +53,7 @@ export default async function RootLayout({
             <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
                 <div className="relative flex flex-col h-screen">
                     <Background />
-                    <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-                        {children}
-                    </main>
+                    <main>{children}</main>
                 </div>
             </Providers>
         </NextIntlClientProvider>

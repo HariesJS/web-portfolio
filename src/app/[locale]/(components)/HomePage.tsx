@@ -4,13 +4,21 @@ import React, {useEffect, useLayoutEffect, useRef, useState} from "react"
 import gsap from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import {ScrollToPlugin} from "gsap/ScrollToPlugin"
-import {TopIcon} from "@/components/Header/icons"
+import {
+    GithubIcon,
+    LinkedInIcon,
+    MailIcon,
+    TelegramIcon,
+    TopIcon,
+} from "@/components/Header/icons"
 import {Header} from "@/components/Header"
 import {AboutMe} from ".//AboutMe"
 import {Skills} from "./Skills"
 import {Projects} from "./Projects"
 import {Tools} from "./Tools"
 import {Contacts} from "./Contacts"
+import {siteConfig} from "@/config/site"
+import {Link} from "@heroui/link"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -177,38 +185,89 @@ export default function HomePage() {
 
     return (
         <div ref={mainRef}>
-            <Header buttonsData={buttonsData} />
-            {isShowTopButton ? (
-                <div
-                    onClick={scrollToTop}
-                    style={{
-                        cursor: "pointer",
-                        position: "fixed",
-                        bottom: "5%",
-                        zIndex: 999,
-                    }}
-                >
+            <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                <Header buttonsData={buttonsData} />
+                {isShowTopButton ? (
                     <div
+                        onClick={scrollToTop}
                         style={{
-                            backdropFilter: "blur(10px)",
-                            backgroundColor: "rgba(255, 255, 255, 0.1)",
-                            borderRadius: "100px",
+                            cursor: "pointer",
+                            position: "fixed",
+                            bottom: "5%",
+                            zIndex: 999,
                         }}
                     >
-                        <TopIcon size={50} />
+                        <div
+                            className="backdrop-blur bg-white/10"
+                            style={{
+                                borderRadius: "100px",
+                            }}
+                        >
+                            <TopIcon size={50} />
+                        </div>
                     </div>
+                ) : null}
+                <AboutMe />
+                <Skills
+                    skillsContainerRef={skillsContainerRef}
+                    skillsRef={skillsRefs}
+                    isLoaded={isLoaded}
+                />
+                <div ref={contentRef} />
+                <Projects projectRef={projectRef} isLoaded={isLoaded} />
+                <Tools toolsRef={toolsRef} isLoaded={isLoaded} />
+                <Contacts contactsRef={contactsRef} isLoaded={isLoaded} />
+            </div>
+            <div
+                className="backdrop-blur-sm bg-black/50"
+                style={{
+                    zIndex: 999999,
+                    width: "100vw",
+                    bottom: 0,
+                    margin: 0,
+                    padding: 20,
+                    opacity: isLoaded ? 1 : 0,
+                }}
+            >
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: 10,
+                    }}
+                >
+                    <Link
+                        isExternal
+                        aria-label="Github"
+                        href={siteConfig.links.github}
+                    >
+                        <GithubIcon className="text-default-500" />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="LinkedIn"
+                        href={siteConfig.links.linkedIn}
+                    >
+                        <LinkedInIcon />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="Telegram"
+                        href={siteConfig.links.telegram}
+                    >
+                        <TelegramIcon />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="Mail"
+                        href={siteConfig.links.mail}
+                    >
+                        <MailIcon />
+                    </Link>
                 </div>
-            ) : null}
-            <AboutMe />
-            <Skills
-                skillsContainerRef={skillsContainerRef}
-                skillsRef={skillsRefs}
-                isLoaded={isLoaded}
-            />
-            <div ref={contentRef} />
-            <Projects projectRef={projectRef} isLoaded={isLoaded} />
-            <Tools toolsRef={toolsRef} isLoaded={isLoaded} />
-            <Contacts contactsRef={contactsRef} isLoaded={isLoaded} />
+            </div>
             <style jsx global>{`
                 .section {
                     position: relative;
