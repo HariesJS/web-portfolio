@@ -185,7 +185,7 @@ export default function HomePage() {
 
     return (
         <div ref={mainRef}>
-            <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <div className="container mx-auto max-w-7xl pt-16 px-6 flex-grow overflow-x-hidden">
                 <Header buttonsData={buttonsData} />
                 {isShowTopButton ? (
                     <div
