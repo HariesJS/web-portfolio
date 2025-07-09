@@ -189,18 +189,29 @@ export default function HomePage() {
                 <Header buttonsData={buttonsData} />
                 {isShowTopButton ? (
                     <div
-                        onClick={scrollToTop}
+                        className="container mx-auto max-w-7xl pt-16 px-6"
                         style={{
-                            cursor: "pointer",
                             position: "fixed",
+                            width: "100%",
                             bottom: "5%",
-                            zIndex: 999,
+                            zIndex: 1,
+                            display: "flex",
+                            flex: 1,
+                            justifyContent: "flex-end",
+
+                            pointerEvents: "none",
                         }}
                     >
                         <div
+                            onClick={scrollToTop}
                             className="backdrop-blur bg-white/10"
                             style={{
+                                cursor: "pointer",
                                 borderRadius: "100px",
+                                pointerEvents: "auto",
+                                width: 50,
+                                height: 50,
+                                marginRight: 16,
                             }}
                         >
                             <TopIcon size={50} />

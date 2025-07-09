@@ -154,6 +154,9 @@ export const Projects = ({
                 backdrop={"blur"}
                 isOpen={isOpen}
                 onOpenChange={onOpenChange}
+                style={{
+                    zIndex: 9999,
+                }}
             >
                 <ModalContent>
                     {(onClose) => (
