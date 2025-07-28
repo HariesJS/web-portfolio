@@ -71,11 +71,16 @@ export const skillsData = [
     },
     {
         id: "13",
+        title: "AWS",
+        image: "/images/aws.png",
+    },
+    {
+        id: "14",
         title: "Stripe",
         image: "/images/stripe.png",
     },
     {
-        id: "14",
+        id: "15",
         title: "Solidity",
         image: "/images/solidity.png",
     },

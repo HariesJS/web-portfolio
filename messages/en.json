@@ -71,7 +71,8 @@
         "figma_for": " for design",
         "description": "Usually I'm used next packages",
         "for_web": "For Web",
-        "for_mobile": "For Mobile"
+        "for_mobile": "For Mobile",
+        "for_backend": "For Backend"
     },
     "Contacts": {
         "contacts": "Contacts",

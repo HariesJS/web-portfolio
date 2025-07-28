@@ -132,7 +132,6 @@ export const Tools = ({
                         <Code color="primary">heroui</Code>
                         <Code color="primary">uuid</Code>
                         <Code color="primary">yup</Code>
-                        <Code color="primary">redux-toolkit</Code>
                         <Code color="primary">zustand</Code>
                         <Code color="primary">react-query</Code>
                         <Code color="primary">graphql</Code>
@@ -145,7 +144,6 @@ export const Tools = ({
                         <Code color="primary">gsap</Code>
                         <Code color="primary">react-icons</Code>
                         <Code color="primary">react-i18next</Code>
-                        <Code color="primary">redux-toolkit</Code>
                         <Code color="primary">react-lottie</Code>
                     </div>
                 </AccordionItem>
@@ -172,6 +170,12 @@ export const Tools = ({
                         <Code color="success">styled-components</Code>
                         <Code color="success">react-native-fast-image</Code>
                         <Code color="success">react-native-fs</Code>
+                        <Code color="success">aws-amplify/ui-react-native</Code>
+                        <Code color="success">aws-appsync-auth-link</Code>
+                        <Code color="success">aws-amplify-react-native</Code>
+                        <Code color="success">
+                            aws-appsync-subscription-link
+                        </Code>
                         <Code color="success">
                             react-native-gesture-handler
                         </Code>
@@ -201,6 +205,7 @@ export const Tools = ({
                             react-native-apple-authentication
                         </Code>
                         <Code color="success">react-native-google-signin</Code>
+                        <Code color="success">react-native-maps</Code>
                         <Code color="success">
                             react-native-audio-recorder-player
                         </Code>
@@ -257,6 +262,40 @@ export const Tools = ({
                         </Code>
                         <Code color="success">react-native-uuid</Code>
                         <Code color="success">subscriptions-transport-ws</Code>
+                    </div>
+                </AccordionItem>
+                <AccordionItem
+                    key="3"
+                    aria-label={`${t("for_backend")} (NodeJS/Express/NestJS/GraphQL)`}
+                    title={`${t("for_backend")} (NodeJS/Express/NestJS/GraphQL)`}
+                >
+                    <div className="flex flex-wrap gap-4">
+                        <Code color="warning">express</Code>
+                        <Code color="warning">cors</Code>
+                        <Code color="warning">nestjs</Code>
+                        <Code color="warning">class-validator</Code>
+                        <Code color="warning">pg</Code>
+                        <Code color="warning">reflect-metadata</Code>
+                        <Code color="warning">rxjs</Code>
+                        <Code color="warning">styled-components</Code>
+                        <Code color="warning">typeorm</Code>
+                        <Code color="warning">ts-node</Code>
+                        <Code color="warning">typescript</Code>
+                        <Code color="warning">bcryptjs</Code>
+                        <Code color="warning">dotenv</Code>
+                        <Code color="warning">graphql-yoga</Code>
+                        <Code color="warning">jsonwebtoken</Code>
+                        <Code color="warning">mongoose</Code>
+                        <Code color="warning">graphql-codegen</Code>
+                        <Code color="warning">graphql-cli</Code>
+                        <Code color="warning">apollo-server</Code>
+                        <Code color="warning">apollo-server-express</Code>
+                        <Code color="warning">aws-lambda</Code>
+                        <Code color="warning">aws-sdk</Code>
+                        <Code color="warning">axios</Code>
+                        <Code color="warning">mongodb</Code>
+                        <Code color="warning">sentry/node</Code>
+                        <Code color="warning">nodemon</Code>
                     </div>
                 </AccordionItem>
             </Accordion>
