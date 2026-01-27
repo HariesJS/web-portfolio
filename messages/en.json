@@ -9,7 +9,7 @@
     },
     "AboutMe": {
         "username": "Evgeniy Chepurnoy",
-        "about": "6 and a half years experience in programming, 5,6+ years experience on real projects. Worked both in start-ups and in a large companies. I have mentored and trained others and was a team leader on several projects."
+        "about": "8+ years experience in programming, 6+ years experience on real projects. Worked both in start-ups and in a large companies. I have mentored and trained others and was a team leader on several projects."
     },
     "Skills": {
         "skills": "Skills"
@@ -47,6 +47,10 @@
             "description": "Your trusted cleaning company partner.",
             "info": "Description and screenshot"
         },
+        "Familifood": {
+            "description": "For over 30 years, Familifood has become a distinguished name in premium portion-controlled steaks, meats, seafood, and gourmet foods.",
+            "info": "Description and screenshots"
+        },
         "Lumm": {
             "description": "Lumm is the Web3 application on which you can store NFT, trade on marketplace and connect cryptowallets.",
             "info": "Description and video"
@@ -54,10 +58,6 @@
         "Viround_m": {
             "description": "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
             "info": "Description and screenshots"
-        },
-        "Viround_w": {
-            "description": "Viround is a social network with advanced functionality, including news, groups, dating, and contests.",
-            "info": "Description and screenshot"
         }
     },
     "Tools": {

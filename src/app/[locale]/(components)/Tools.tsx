@@ -262,6 +262,7 @@ export const Tools = ({
                         </Code>
                         <Code color="success">react-native-uuid</Code>
                         <Code color="success">subscriptions-transport-ws</Code>
+                        <Code color="success">callstack/liquid-glass</Code>
                     </div>
                 </AccordionItem>
                 <AccordionItem
